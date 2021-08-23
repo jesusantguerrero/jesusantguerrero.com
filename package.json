@@ -8,7 +8,8 @@
     "build": "astro build"
   },
   "devDependencies": {
+    "@astrojs/renderer-vue": "^0.1.7",
     "astro": "^0.19.1",
-    "@astrojs/renderer-vue": "^0.1.7"
+    "tailwindcss": "^2.2.7"
   }
 }

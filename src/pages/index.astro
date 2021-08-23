@@ -1,5 +1,5 @@
 ---
-import Tour from '../components/Tour.astro';
+import Intro from '../components/Intro.astro';
 import VueCounter from '../components/VueCounter.vue';
 
 let title = 'Jesus Guerrero';
@@ -10,8 +10,7 @@ let title = 'Jesus Guerrero';
     <meta name="viewport" content="width=device-width">
     <title>{title}</title>
 
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/style/global.css">
     <link rel="stylesheet" href="/style/home.css">
 
@@ -26,14 +25,7 @@ let title = 'Jesus Guerrero';
 </head>
 <body>
     <main>
-        <header>
-            <div>
-                <img width="60" height="80" src="/assets/logo.svg" alt="Astro logo">
-                <h1>Jesus Guerrero</h1>
-            </div>
-        </header>
-
-        <VueCounter client:visible />
+        <Intro></Intro>
     </main>
 </body>
 </html>
