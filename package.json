@@ -1,12 +1,14 @@
 {
-  "name": "@astrojs/portfolio-template",
-  "private": true,
+  "name": "@example/starter",
   "version": "0.0.1",
+  "private": true,
   "scripts": {
+    "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build"
   },
   "devDependencies": {
-    "astro": "^0.13.0"
+    "astro": "^0.19.1",
+    "@astrojs/renderer-vue": "^0.1.7"
   }
 }
