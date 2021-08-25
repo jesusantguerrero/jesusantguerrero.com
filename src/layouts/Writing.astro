@@ -1,0 +1,53 @@
+---
+import { Markdown } from 'astro/components';
+import { portfolio } from "../utils/curriculum.ts";
+import Project from "../components/Project.astro";
+---
+<article class="project-section">
+    <section class="flex flex-col personal-card md:flex-row">
+        <div class="w-4/12 personal-card_left">
+            <h1 class="text-5xl font-bold personal-card_name top-8 md:top-1/4 md:text-7xl -left-10 md:-left-10 lg:-left-24">
+                <p class="">Writing</p>
+                <p class="pl-2 mt-5 text-sm">
+                   My Latest posts.
+                </p>
+            </h1>
+        </div>
+
+        <div class="px-10 mt-48 space-y-10 text-lg personal-card_body md:space-y-5 md:px-20 md:mt-0 md:w-8/12">
+            { portfolio.map(project => (
+                <Project project={project} />
+            ))}
+        </div>
+    </section>
+</article>
+
+<style lang="scss">
+    article {
+        background-color: var(--darken-primary-color);
+        color: var(--text-color);
+        display: flex;
+        align-items: center;
+        width: 100%;
+        min-height: 100vh;
+    }
+    
+    section.personal-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80%;
+        width: 80%;
+        border-radius: 8px;
+        margin: auto;
+        position: relative;
+
+
+        .personal-card_name {
+            color: dodgerblue;
+            position: absolute;
+        }
+    }
+    
+
+</style>

@@ -1,0 +1,20 @@
+---
+export interface Project {
+    title: string,
+    description: string,
+    technologies: string[]
+}
+export interface Props {
+    project: Project
+}
+
+const { project } = Astro.props;
+---
+
+<div class="px-10 py-5 transition transform rounded-lg cursor-pointer bg-primary-500 hover:scale-105">
+    <h4 class="font-bold">{project.title}</h4>
+    <p class="text-"> { project.description }</p>
+    <p class="space-x-2"> { project.technologies.map(tech => (
+        <span class="px-2 py-1 text-xs rounded-md bg-primary-900"> { tech }</span>
+    ))}</p>
+</div>

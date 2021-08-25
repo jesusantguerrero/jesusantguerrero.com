@@ -17,9 +17,16 @@
   --darken-primary-color: #0D141E;
   --secondary-color: #F2F2F2;
   --text-color: #fff;
-  --contrast-color: crimson;
+  --contrast-color: dodgerblue;
 }
 
+.personal-card_body a {
+  color: dodgerblue !important;
+  border-bottom: var(--contrast-color) dashed 1px;
+}
+article {
+  overflow: hidden;
+}
 @media (prefers-color-scheme: dark) {
   body {
     background: var(--primary-color);

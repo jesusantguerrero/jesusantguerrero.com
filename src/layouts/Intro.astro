@@ -1,0 +1,75 @@
+---
+import { Markdown } from 'astro/components';
+---
+<article class="intro-section">
+    <section class="flex flex-col personal-card md:flex-row">
+        <div class="w-4/12 personal-card_left">
+            <h1 class="text-5xl font-bold personal-card_name top-8 md:top-1/4 md:text-7xl -left-10 md:-left-10 lg:-left-24">
+                <p class="">Jesus</p>
+                <p class="mb-0 pl-14">Guerrero</p>
+                <p class="mt-5 text-sm pl-14">
+                    Web developer / Software Engineer / Creator
+                </p>
+            </h1>
+        </div>
+
+        <div class="px-10 mt-48 space-y-10 text-lg personal-card_body md:space-y-5 md:px-20 md:mt-0 md:w-8/12">
+            <Markdown>         
+                I'm a system engineer, web developer from Dominican Republic who is 
+                passionate about programming in general, web development and [Vue.js](https://v3.vuejs.org). Currently working at 
+                [MCTekk](https://mctekk.com) mostly doing frontend development.
+            </Markdown>
+            <p>
+                I love to learn new things, share knowledge and create (apps, (a try of) poetry ). 
+                When not, I am singing Bob Marley's songs.
+            </p>
+
+            <Markdown>
+                Find me on [Twitter](https://github.com/antfu/vitesse), [Github]() or [Hashnode](https://freesgen.hashnode.dev).
+            </Markdown>
+        </div>
+    </section>
+</article>
+
+<style lang="scss">
+    article {
+        background-color: var(--darken-primary-color);
+        color: var(--text-color);
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+    }
+    
+    section.personal-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80%;
+        width: 80%;
+        border-radius: 8px;
+        margin: auto;
+        position: relative;
+        background: var(--primary-color); 
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 20%;
+            height: 0;
+            width: 0;
+            border-right: 50px solid transparent;
+            border-left: 50px solid transparent;
+            border-top: 50px solid transparent;
+            border-bottom: 30px solid var(--darken-primary-color);
+        }
+
+        .personal-card_name {
+            color: dodgerblue;
+            position: absolute;
+        }
+    }
+    
+
+</style>
