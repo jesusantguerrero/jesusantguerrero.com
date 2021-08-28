@@ -3,7 +3,7 @@ import { Markdown } from 'astro/components';
 import { fetchPostsByUser } from "../utils/apis.ts";
 import Project from "../components/Project.astro";
 
-const posts = await fetchPostsByUser('freesgen');
+const posts = [] // await fetchPostsByUser('freesgen');
 ---
 <article class="project-section">
     <section class="flex flex-col personal-card md:flex-row">

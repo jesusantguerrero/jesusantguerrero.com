@@ -2,6 +2,7 @@
 import { Markdown } from 'astro/components';
 import { portfolio } from "../utils/curriculum.ts";
 import Project from "../components/Project.astro";
+import SearchBox from "../components/SearchBox.vue";
 ---
 <article class="project-section">
     <section class="flex flex-col personal-card md:flex-row">
@@ -13,11 +14,15 @@ import Project from "../components/Project.astro";
                 </p>
             </h1>
         </div>
-
-        <div class="px-10 mt-48 space-y-10 text-lg personal-card_body md:space-y-5 md:px-20 md:mt-0 md:w-8/12">
-            { portfolio.map(project => (
-                <Project project={project} />
-            ))}
+        <div class="mt-48 text-lg personal-card_body md:space-y-5 md:px-20 md:mt-0 md:w-8/12">
+            <div class="px-10">
+                <SearchBox text="my stuff" client:visible />
+            </div>
+            <div class="px-10 space-y-5">
+                { portfolio.map(project => (
+                    <Project project={project} />
+                ))}
+            </div>
         </div>
     </section>
 </article>

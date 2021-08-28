@@ -5,11 +5,12 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build"
+    "build": "astro build",
+    "preview": "astro preview"
   },
   "devDependencies": {
     "@astrojs/renderer-vue": "^0.1.7",
-    "astro": "^0.19.1",
+    "astro": "^0.20.3",
     "tailwindcss": "^2.2.7"
   }
 }
