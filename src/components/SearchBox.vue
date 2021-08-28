@@ -1,34 +1,49 @@
 <template>
     <div class="h-10 px-12 py-2 rounded-md text-accent-100 bg-primary-500">
-        {{ searchText }} Hola
+        {{ searchText }}<span v-show="isWriting">|</span>
     </div>
 </template>
 
-<script setup lang="ts">
-import { ref, onMounted } from 'vue';
+<script lang="ts">
+import { ref, onMounted, computed } from 'vue';
 
-const props = defineProps({
-    text: {
-        type: String,
-        default: 'My stuff',
+export default {
+    props: {
+        text: {
+            type: String,
+            default: 'My stuff',
+        },
+        speed: {
+            type: Number,
+            default: 200,
+        },
     },
-    speed: {
-        type: Number,
-        default: 200,
-    },
-})
+    setup(props, { emit }) {
+        const searchText = ref('');
+        const timer = ref(null);
+        
+        const write = () => {
+            searchText.value = props.text.slice(0, searchText.value.length + 1);
+            if (searchText.value.length == props.text.length) {
+                clearInterval(timer.value);
+                timer.value = null;
+            }
+        }
+        
+        const isWriting = computed(() => {
+            return timer.value !== null;
+        });
 
-let searchText = $ref('');
-const timer = ref(null);
+        onMounted(() => {
+            console.log("Mounted again")
+            timer.value = setInterval(write, props.speed);
+        })
 
-const write = () => {
-    searchText = props.text.slice(0, searchText.length + 1);
-    if (searchText.length == props.text.length) {
-        clearInterval(timer.value);
+        return {
+            searchText,
+            isWriting,
+        }
     }
 }
 
-onMounted(() => {
-    timer.value = setInterval(write, props.speed);
-})
 </script>

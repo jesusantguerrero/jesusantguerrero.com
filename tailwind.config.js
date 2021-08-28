@@ -1,8 +1,7 @@
-const colors = require("tailwindcss/colors");
 module.exports = {
   mode: 'jit',
   purge: ['./public/**/*.html', './src/**/*.{astro,js,jsx,svelte,ts,tsx,vue}'],
-  // more options here
+  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
@@ -32,7 +31,11 @@ module.exports = {
           '800': '#004384',
           '900': '#002951'
         },
-      }
+      },
     },
-  }
-};
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+}
