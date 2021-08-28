@@ -19,7 +19,7 @@ import { Markdown } from 'astro/components';
                 passionate about programming in general, web development and [Vue.js](https://v3.vuejs.org). Currently working at 
                 [MCTekk](https://mctekk.com) mostly doing frontend development.
             </Markdown>
-            <p>
+            <p class="hidden md:block">
                 I love to learn new things, share knowledge and create (apps, (a try of) poetry ). 
                 When not, I am singing Bob Marley's songs.
             </p>
@@ -70,6 +70,22 @@ import { Markdown } from 'astro/components';
             position: absolute;
         }
     }
-    
 
+    @media (max-width: 768px) {
+        section.personal-card {
+            width: 80%;
+            height: 90%;
+
+             &:after {
+                bottom: 0;
+                right: 20%;
+                height: 0;
+                width: 0;
+                border-right: 20px solid transparent;
+                border-left: 20px solid transparent;
+                border-top: 20px solid transparent;
+                border-bottom: 16px solid var(--darken-primary-color);
+            }
+        }
+    }
 </style>
