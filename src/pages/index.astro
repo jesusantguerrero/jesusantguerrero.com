@@ -1,4 +1,5 @@
 ---
+import Header from "../components/Header.vue"
 import Intro from '../layouts/Intro.astro';
 import Projects from '../layouts/Projects.astro';
 import Writing from '../layouts/Writing.astro';
@@ -25,6 +26,7 @@ let title = 'Jesus Guerrero';
 </head>
 <body>
     <main>
+        <Header client:visible></Header>
         <Intro></Intro>
         <Projects></Projects>
         <Writing></Writing>

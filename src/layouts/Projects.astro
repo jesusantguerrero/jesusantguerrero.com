@@ -4,7 +4,7 @@ import { portfolio } from "../utils/curriculum.ts";
 import Project from "../components/Project.astro";
 import SearchBox from "../components/SearchBox.vue";
 ---
-<article class="project-section">
+<article class="px-4 project-section">
     <section class="flex flex-col personal-card md:flex-row">
         <div class="w-4/12 personal-card_left">
             <h1 class="text-5xl font-bold personal-card_name top-8 md:top-1/4 md:text-7xl -left-10 md:-left-10 lg:-left-24">
@@ -14,7 +14,7 @@ import SearchBox from "../components/SearchBox.vue";
                 </p>
             </h1>
         </div>
-        <div class="mt-48 text-lg personal-card_body md:space-y-5 md:px-20 md:mt-0 md:w-8/12">
+        <div class="px-4 mt-48 text-lg personal-card_body md:space-y-5 md:px-20 md:mt-0 md:w-8/12">
             <div class="px-10">
                 <SearchBox text="Some of my projects" client:visible />
             </div>
