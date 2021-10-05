@@ -11,10 +11,10 @@ export interface Props {
 const { project } = Astro.props;
 ---
 
-<div class="px-10 py-5 transition transform rounded-lg cursor-pointer bg-primary-500 hover:scale-105">
-    <h4 class="font-bold">{project.title}</h4>
-    <p class="mt-2 text-sm text-gray-200"> { project.description }</p>
+<div class="px-10 py-5 text-gray-400 transition transform border border-gray-100 rounded-lg cursor-pointer hover:text-gray-500 hover:bg-gray-50 hover:scale-105">
+    <h4 class="font-bold ">{project.title}</h4>
+    <p class="mt-2 text-sm "> { project.description }</p>
     <p class="space-x-2"> { project.technologies && project.technologies.map(tech => (
-        <span class="px-2 py-1 text-xs rounded-md bg-primary-300"> { tech }</span>
+        <span class="py-1 text-xs rounded-md text-accent-500">{ tech }</span>
     ))}</p>
 </div>
