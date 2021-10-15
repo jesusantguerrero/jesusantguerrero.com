@@ -22,7 +22,14 @@
 
 .personal-card_body a {
   color: dodgerblue !important;
+  font-weight: 600;
   border-bottom: var(--contrast-color) dashed 1px;
+}
+
+.personal-card_body a:hover {
+  color: dodgerblue !important;
+  font-weight: 600;
+  border-bottom: var(--contrast-color) solid 1px;
 }
 
 article {

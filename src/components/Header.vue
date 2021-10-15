@@ -1,6 +1,6 @@
 <template>
 <div class="fixed z-10 w-full px-10 py-3 text-gray-400 transition" :class="{'shadow-md bg-accent-500 text-white': scrolled}">
-    <div class="flex justify-between wrapper">
+    <div class="flex items-center justify-between wrapper">
         <h1 class="text-2xl font-bold">
             <a href="/">
                 JG
