@@ -14,8 +14,24 @@ const { seed } = Astro.props;
 
 <div class="px-10 py-5 text-gray-400 transition transform border border-gray-100 rounded-lg cursor-pointer hover:text-gray-500 hover:bg-gray-50 hover:scale-105">
     <h4 class="font-bold ">{seed.title}</h4>
-    <p class="mt-2 text-sm "> { seed.description }</p>
-    <p class="space-x-2"> { seed.tags && seed.tags.map(tech => (
-        <span class="py-1 text-xs rounded-md text-accent-500">{ tech }</span>
-    ))}</p>
+    { seed.description && <p class="mt-2 text-sm"> seed.description </p>}
+    <div class="flex items-center justify-between">
+        <div class="language-container">
+            <p class="space-x-2"> { seed.tags && seed.tags.map(tech => (
+                <span class="py-1 text-xs rounded-md text-accent-500">{ tech }</span>
+            ))}</p>
+        </div>
+        <div class="capitalize">
+            Lang: { seed.language }
+        </div>
+    </div>
+    <div class="divide-y-2 divide-gray-400"></div>
+    <div class="flex justify-between">
+        <div>
+            { seed.planted }
+        </div>
+        <div class="capitalize">
+            { seed.status }
+        </div>
+    </div>
 </div>
