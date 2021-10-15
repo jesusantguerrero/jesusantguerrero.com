@@ -1,38 +1,13 @@
 ---
-import Header from "../components/Header.vue"
-import Intro from '../layouts/Intro.astro';
-import Projects from '../layouts/Projects.astro';
-import Writing from '../layouts/Writing.astro';
+import Page from '../layouts/Page.astro';
+import Intro from '../components/sections/Intro.astro';
+import Projects from '../components/sections/Projects.astro';
+import Writing from '../components/sections/Writing.astro';
 
 let title = 'Jesus Guerrero';
 ---
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>{title}</title>
-
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/style/global.css">
-
-    <style>
-        header {
-            display: flex;
-            flex-direction: column;
-            gap: 1em;
-            max-width: min(100%, 68ch);
-        }
-    </style>
-</head>
-<body>
-    <main class="mb-20">
-        <Header client:visible></Header>
-        <Intro></Intro>
-        <Projects></Projects>
-        <Writing></Writing>
-    </main>
-    <footer class="w-full py-5 text-gray-400 border-t">
-        <div class="mx-auto text-xs max-w-7xl">2021 Made with <span class="font-bold text-accent-400">code</span> by <span class="font-bold underline">Jesus Guerrero</span></div>
-    </footer>
-</body>
-</html>
+<Page title={title}>
+    <Intro></Intro>
+    <Projects></Projects>
+    <Writing></Writing>
+</Page>

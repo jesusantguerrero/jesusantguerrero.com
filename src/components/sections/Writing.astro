@@ -1,10 +1,9 @@
 ---
-import { fetchPostsByUser } from "../utils/apis.ts";
-import Project from "../components/Project.astro";
-import SectionTag from "../components/SectionTag.astro";
+import { fetchPostsByUser } from "../../utils/apis.ts";
+import Project from "../Project.astro";
+import SectionTag from "../SectionTag.astro";
 
 const posts = await fetchPostsByUser('freesgen');
-console.log(posts);
 ---
 <article class="project-section">
     <section class="flex flex-col personal-card md:flex-row">
