@@ -24,12 +24,7 @@
   color: dodgerblue !important;
   border-bottom: var(--contrast-color) dashed 1px;
 }
+
 article {
   overflow: hidden;
-}
-@media (prefers-color-scheme: dark) {
-  body {
-    background: var(--primary-color);
-    color: var(--text-color);
-  }
 }
