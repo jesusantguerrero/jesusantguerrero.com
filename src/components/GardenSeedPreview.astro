@@ -7,14 +7,14 @@ export interface GardenSeed {
 }
 
 export interface Props {
-    seed: GardenSeed
+    seed: GardenSeed,
+    classes: string,
 }
 
-const { seed } = Astro.props;
+const { seed, classes } = Astro.props;
 ---
-
-    <div class="px-10 py-5 text-gray-400 transition transform border border-gray-100 rounded-lg cursor-pointer hover:text-gray-500 hover:bg-gray-50">
-        <h4 class="font-bold "><a href={`/garden/seeds/${seed.slug}`} class="block">{seed.title}</a></h4>
+    <div class={`px-10 py-5 text-gray-400 transition transform border border-gray-100 rounded-lg cursor-pointer hover:text-gray-500 hover:bg-gray-50 ${classes}`} >
+        <h4 class="text-sm font-bold hover:text-dodgerblue-400"><a href={`/garden/seeds/${seed.slug}`} class="block">{seed.title}</a></h4>
         { seed.description && <p class="mt-2 text-sm"> seed.description </p>}
         <div class="flex items-center justify-between ">
             <div class="text-left language-container">
@@ -22,12 +22,12 @@ const { seed } = Astro.props;
                     <a href={`/garden/tag/${tag}`} class="inline-block py-1 text-xs rounded-md text-accent-500">#{ tag }</a>
                 ))}</div>
             </div>
-            <div class="capitalize">
+            <div class="text-xs capitalize">
                 Lang: { seed.language }
             </div>
         </div>
         <div class="divide-y-2 divide-gray-400"></div>
-        <div class="flex justify-between">
+        <div class="flex justify-between text-xs">
             <div>
                 { seed.planted }
             </div>

@@ -15,9 +15,9 @@ let GardenSeeds = Astro.fetchContent<GardenSeed>('./seeds/*.md');
             </Markdown>
         </section>
 
-        <section class="flex px-2 mt-10 space-x-2">
+        <section class="flex flex-wrap px-2 mt-10">
             {GardenSeeds.map( seed => 
-                <GardenSeedPreview seed={seed} class="max-w-md"></GardenSeedPreview>
+                <GardenSeedPreview seed={seed} classes="max-w-md mx-2 my-2" />
             )}
         </section>
     </article>
