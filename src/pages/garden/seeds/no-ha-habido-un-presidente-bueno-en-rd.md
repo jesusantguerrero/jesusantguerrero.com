@@ -1,5 +1,6 @@
 ---
 title: 'No ha habido un presidente realmente bueno en RD'
+slug: "no-ha-habido-un-presidente-bueno-en-rd"
 description: ''
 planted: '2021-10-15'
 author: 'Jesus Guerrero'

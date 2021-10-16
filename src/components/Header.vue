@@ -2,12 +2,13 @@
 <div class="fixed z-10 w-full px-10 py-3 text-gray-400 transition" :class="{'shadow-md bg-accent-500 text-white': scrolled}">
     <div class="flex items-center justify-between wrapper">
         <h1 class="text-2xl font-bold">
-            <a href="/">
+            <a href="/" v-if="scrolled || showLogo">
                 JG
             </a>
         </h1>
         <nav class="flex space-x-2.5 font-medium list-none">
-            <li class="cursor-pointer hover:text-dodgerblue" v-for="link in links">
+            <li class="transition cursor-pointer"
+            :class="[scrolled ? 'text-gray-200 hover:text-white': 'hover:text-dodgerblue-400']" v-for="link in links">
                 <a :href="link.path">
                     {{ link.label }}
                 </a>
@@ -22,6 +23,11 @@ import { onMounted, ref } from 'vue'
 
 export default {
     name: 'Header',
+    props: {
+        showLogo: {
+            type: Boolean
+        }
+    },
     setup() {
         const scrolled = ref(false);
         const links = {
@@ -48,10 +54,14 @@ export default {
         }
 
         const checkScroll = () => {
-           scrolled.value = window.scrollY >  document.querySelector('.project-section').offsetTop;
+            const projectSection = document.querySelector('.project-section');
+            if (projectSection) {
+                scrolled.value = window.scrollY >  projectSection.offsetTop;
+            }
         }
 
         onMounted(() => {
+            checkScroll();
             document.addEventListener('scroll', checkScroll);
         });
 

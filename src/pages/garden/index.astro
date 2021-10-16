@@ -6,20 +6,19 @@ import GardenSeedPreview, { GardenSeed } from "../../components/GardenSeedPrevie
 let title = "Garden";
 let GardenSeeds = Astro.fetchContent<GardenSeed>('./seeds/*.md');
 ---
-<Page title={title}>
+<Page title={title} show-title={true}>
     <article class="max-w-5xl pt-20 mx-auto overflow-visible text-left text-gray-700">
         <h2 class="mb-8 text-xl font-bold text-gray-500">Welcome to my Digital Garden</h2>
         <section class="prose">
             <Markdown>
-                This is a collection of notes, resources and explorations I'm currently cultivating. I let myself immerse in a some topics of my interest even out of tech
-                Some notes are Seedlings, some are budding, and some are fully grown Evergreen.
-
-                It will be expressed in two languages according to the target
+                This is a collection of thoughts, notes, resources and explorations I'm currently cultivating. I let myself immerse in some topics of my interest even out of tech.
             </Markdown>
         </section>
 
         <section class="flex px-2 mt-10 space-x-2">
-            {GardenSeeds.map( seed => <GardenSeedPreview seed={seed} class="max-w-md" />)}
+            {GardenSeeds.map( seed => 
+                <GardenSeedPreview seed={seed} class="max-w-md"></GardenSeedPreview>
+            )}
         </section>
     </article>
 </Page>

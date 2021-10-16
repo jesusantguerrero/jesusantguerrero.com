@@ -1,5 +1,6 @@
 ---
 title: 'Error en la fundacion Dominicana'
+slug: "error-fundacion-dominicana"
 description: ''
 planted: '2021-10-15'
 author: 'Jesus Guerrero'
