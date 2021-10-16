@@ -2,7 +2,8 @@
 export interface GardenSeed {
     title: string,
     planted: string,
-    tags: string[]
+    tags: string[],
+    slug: string
 }
 
 export interface Props {
@@ -12,26 +13,26 @@ export interface Props {
 const { seed } = Astro.props;
 ---
 
-<div class="px-10 py-5 text-gray-400 transition transform border border-gray-100 rounded-lg cursor-pointer hover:text-gray-500 hover:bg-gray-50">
-    <h4 class="font-bold ">{seed.title}</h4>
-    { seed.description && <p class="mt-2 text-sm"> seed.description </p>}
-    <div class="flex items-center justify-between">
-        <div class="language-container">
-            <p class="space-x-2"> { seed.tags && seed.tags.map(tag => (
-                <span class="py-1 text-xs rounded-md text-accent-500">#{ tag }</span>
-            ))}</p>
+    <div class="px-10 py-5 text-gray-400 transition transform border border-gray-100 rounded-lg cursor-pointer hover:text-gray-500 hover:bg-gray-50">
+        <h4 class="font-bold "><a href={`/garden/seeds/${seed.slug}`} class="block">{seed.title}</a></h4>
+        { seed.description && <p class="mt-2 text-sm"> seed.description </p>}
+        <div class="flex items-center justify-between ">
+            <div class="text-left language-container">
+                <div class="space-x-2 "> { seed.tags && seed.tags.map(tag => (
+                    <a href={`/garden/tag/${tag}`} class="inline-block py-1 text-xs rounded-md text-accent-500">#{ tag }</a>
+                ))}</div>
+            </div>
+            <div class="capitalize">
+                Lang: { seed.language }
+            </div>
         </div>
-        <div class="capitalize">
-            Lang: { seed.language }
+        <div class="divide-y-2 divide-gray-400"></div>
+        <div class="flex justify-between">
+            <div>
+                { seed.planted }
+            </div>
+            <div class="capitalize">
+                { seed.status }
+            </div>
         </div>
     </div>
-    <div class="divide-y-2 divide-gray-400"></div>
-    <div class="flex justify-between">
-        <div>
-            { seed.planted }
-        </div>
-        <div class="capitalize">
-            { seed.status }
-        </div>
-    </div>
-</div>

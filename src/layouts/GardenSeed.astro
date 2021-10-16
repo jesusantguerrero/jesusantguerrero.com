@@ -1,20 +1,25 @@
 ---
 import Header from "../components/Header.vue"
 
-const { title } = Astro.props;
+const { content } = Astro.props;
 ---
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>{title}</title>
+    <title>{content.title}</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/style/global.css">
 </head>
 <body>
     <main class="mb-20">
         <Header client:visible></Header>
-        <slot />
+        <article class="max-w-5xl pt-20 mx-auto">
+            <h1 class="mb-5 text-xl font-bold text-gray-400"> {content.title }</h1>
+            <section class="prose">
+                <slot />
+            </section>
+        </article>
     </main>
     <footer class="w-full py-5 text-gray-400 border-t">
         <div class="mx-auto text-xs max-w-7xl">2021 Made with <span class="font-bold text-accent-400">code</span> by <span class="font-bold underline">Jesus Guerrero</span></div>
