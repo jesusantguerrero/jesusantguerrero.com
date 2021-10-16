@@ -16,25 +16,24 @@ export const skills = {
 export const portfolio = [
   {
     title: 'Zen.',
-    technologies: ['javascript', 'vue.js', 'design-patterns', 'sass', 'pug'],
-    description: 'It is an android calculator clone, it has order precedence and cool animations',
-    image: './assets/img/calculator.png',
-    link: 'https://codepen.io/freesgen/pen/JOXGrW',
-    type: 'frontend',
+    technologies: ['HTML', 'CSS / SCSS', 'TailwindCSS', 'Javascript', 'Vue', 'Firebase Auth', 'Firestore', 'Firebase Functions', 'Express.js'],
+    description: 'Zen is a productivity app that integrates Eisenhower Matrix, Promodoros, and part of the Get Things Done (GTD) principles in a unique way, to improve your developer routine. The purpose of Zen is to help you stay in the zone.',
+    image: 'https://zenboard.app/zenboard.png',
+    link: 'https://zenboard.app/',
+    type: 'fullstack',
   },
-
   {
-    title: 'IC Payment',
-    technologies: ['PHP', 'vue.js', 'AJAX', 'sass', 'MySql', 'codeigniter'],
-    description: 'Management System for an ISP Company',
+    title: 'Sunday',
+    technologies: ['HTML', 'CSS / SCSS', 'TailwindCSS', 'Javascript', 'Vue', 'PHP', 'Laravel', 'MySql', 'Docker'],
+    description: 'Monolith app using laravel 8, jetstream, intertia and vue. ICDaily is a productivity web app to help you keep your tasks, track your time, using pomodoro inspired on Monday.',
     image: './assets/img/home.png',
-    link: 'https://ic-payment-staging.herokuapp.com',
+    link: 'https://github.com/jesusantguerrero/sunday',
     type: 'most proud',
   },
 
   {
     title: 'IC Note',
-    technologies: ['javascript', 'electron', 'node.js'],
+    technologies: ['HTML', 'CSS', 'javascript', 'electron', 'node.js'],
     description: 'Desktop Markdown note-taker using Electron',
     image: './assets/img/img7.png',
     link: 'https://github.com/jesusantguerrero/icnote',
@@ -42,26 +41,9 @@ export const portfolio = [
   },
 ]
 
-export const contacts = {
-  message: '',
-  networks: [
-    { name: '', link: '' },
-  ],
-}
-
-export const work = [
-  {
-    title: 'IC Note',
-    description: '',
-    link: '',
-    technologies: [],
-  },
-]
 
 export default {
   about,
   skills,
-  portfolio,
-  work,
-  contacts,
+  portfolio
 }
