@@ -16,7 +16,7 @@ import SectionTag from "../SectionTag.astro";
             <div class="px-10">
                 <SearchBox text="Some of my projects" client:visible />
             </div>
-            <div class="px-10 space-y-5">
+            <div class="px-10 mt-10 space-y-5">
                 { portfolio.map(project => (
                     <Project project={project} />
                 ))}

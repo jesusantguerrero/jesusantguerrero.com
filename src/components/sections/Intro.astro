@@ -4,7 +4,7 @@ import SectionTag  from "../SectionTag.astro";
 ---
 <article class="intro-section">
     <section class="flex flex-col personal-card md:flex-row">
-        <div class="w-4/12 personal-card_left">
+        <div class="w-4/12 mt-10 personal-card_left">
             <SectionTag 
                 title="Jesus" 
                 subtitle="Guerrero"
@@ -12,7 +12,7 @@ import SectionTag  from "../SectionTag.astro";
             />
         </div>
 
-        <div class="px-10 mt-48 space-y-10 text-lg text-gray-500 personal-card_body md:space-y-5 md:px-20 md:mt-0 md:w-8/12">
+        <div class="px-10 mt-64 space-y-10 text-lg text-gray-500 personal-card_body md:space-y-5 md:px-20 md:mt-0 md:w-8/12">
             <Markdown>         
                 I'm a system engineer and full-stack developer from Dominican Republic who is 
                 passionate about programming in general, web development and [Vue.js](https://v3.vuejs.org). Currently working at 
@@ -68,6 +68,10 @@ import SectionTag  from "../SectionTag.astro";
     }
 
     @media (max-width: 768px) {
+        article {
+            height: fit-content;
+        }
+
         section.personal-card {
             width: 90%;
             height: 95%;
@@ -77,10 +81,11 @@ import SectionTag  from "../SectionTag.astro";
                 right: 20%;
                 height: 0;
                 width: 0;
+                border-bottom: 16px solid var(--darken-primary-color);
+                @apply border-white;
                 border-right: 20px solid transparent;
                 border-left: 20px solid transparent;
                 border-top: 20px solid transparent;
-                border-bottom: 16px solid var(--darken-primary-color);
             }
         }
     }

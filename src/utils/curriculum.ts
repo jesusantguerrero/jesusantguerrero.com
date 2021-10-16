@@ -41,9 +41,32 @@ export const portfolio = [
   },
 ]
 
+export const more = [
+  {
+    title: 'My Digital Garden',
+    technologies: [],
+    description: 'This is a collection of thoughts, notes, resources and explorations I’m currently cultivating. I let myself immerse in some topics of my interest even out of tech.',
+    link: '/garden',
+  },
+  {
+    title: 'My Five Stars',
+    technologies: [],
+    description: 'Favorite books that have influenced in my thoughts, creativity and/or I liked a lot.',
+    link: '/my-five-stars',
+  },
+
+  {
+    title: 'My Playlist',
+    technologies: [],
+    description: 'Favorite songs I use to code, travel and to clean my house',
+    link: 'my-play-list',
+  },
+]
+
 
 export default {
   about,
   skills,
-  portfolio
+  portfolio,
+  more,
 }

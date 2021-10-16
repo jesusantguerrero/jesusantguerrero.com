@@ -3,6 +3,7 @@ import Page from '../layouts/Page.astro';
 import Intro from '../components/sections/Intro.astro';
 import Projects from '../components/sections/Projects.astro';
 import Writing from '../components/sections/Writing.astro';
+import More from '../components/sections/More.astro';
 
 let title = 'Jesus Guerrero';
 ---
@@ -10,4 +11,7 @@ let title = 'Jesus Guerrero';
     <Intro></Intro>
     <Projects></Projects>
     <Writing></Writing>
+    <div class="md:mt-20">
+        <More></More>
+    </div>
 </Page>
