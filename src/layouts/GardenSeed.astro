@@ -20,7 +20,7 @@ const { content } = Astro.props;
                 <div>Status: <i class="text-green-500 fa fa-seedling"></i> </div>
                 <div>Expertise: </div>
                 <div>PlantDate: {content.planted} </div>
-                <div>Last Update: </div>
+                <div>Last Update: {content.checked || content.planted }</div>
             </div>
             <section class="prose text-gray-500">
                 <slot />

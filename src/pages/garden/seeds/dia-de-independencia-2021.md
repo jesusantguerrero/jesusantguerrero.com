@@ -1,8 +1,8 @@
 ---
-title: 'Dia de independencia 2019'
-slug: "dia-de-independencia-2019"
+title: 'Dia de independencia 2021'
+slug: "dia-de-independencia-2021"
 description: ''
-planted: '2021-10-15'
+planted: '2021-02-27'
 author: 'Jesus Guerrero'
 tags: ['Historia Dominicana', 'Patria']
 language: 'spanish'

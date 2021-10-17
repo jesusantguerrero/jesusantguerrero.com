@@ -1,5 +1,4 @@
 ---
-import { Markdown } from 'astro/components';
 import Page from "../../../layouts/Page.astro";
 import GardenSeedPreview, { GardenSeed } from "../../../components/GardenSeedPreview.astro";
 
@@ -11,20 +10,18 @@ export async function getStaticPaths() {
     return [
         {params: { tag: 'Historia Dominicana' }},
         {params: { tag: 'Programming' }},
-        {params: { tag: 'Productivity' }}
+        {params: { tag: 'Productivity' }},
+        {params: { tag: 'Religion' }},
+        {params: { tag: 'Thoughts' }},
+        {params: { tag: 'Theology' }}
     ];
 }
 ---
 <Page title={title}>
     <article class="max-w-5xl pt-20 mx-auto overflow-visible text-left text-gray-700">
         <h2 class="mb-8 text-xl font-bold text-gray-500">Welcome to my Digital Garden</h2>
-        <section class="prose">
-            <Markdown>
-                This is a collection of notes, resources and explorations I'm currently cultivating. I let myself immerse in a some topics of my interest even out of tech
-                Some notes are Seedlings, some are budding, and some are fully grown Evergreen.
-
-                It will be expressed in two languages according to the target
-            </Markdown>
+        <section class="text-sm italic text-gray-500">
+            <p>Results for the tag: <span class="inline-block text-dodgerblue-400">"{ tag }"</span></p>
         </section>
 
         <section class="flex px-2 mt-10 space-x-2">
