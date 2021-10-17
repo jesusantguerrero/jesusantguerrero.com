@@ -15,7 +15,7 @@ const { content } = Astro.props;
 <body>
     <main class="mb-20">
         <Header client:visible show-title={true} />
-        <article class="max-w-5xl pt-20 mx-auto">
+        <article class="max-w-5xl pt-20 mx-auto overflow-visible">
             <h1 class="mb-1 text-xl font-bold text-gray-400"> {content.title }</h1>
             <div class="flex mb-5 space-x-5 text-sm text-gray-300">
                 <div>Status: <i class="text-green-500 fa fa-seedling"></i> </div>

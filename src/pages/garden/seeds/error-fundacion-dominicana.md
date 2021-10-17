@@ -27,4 +27,4 @@ las buenas intenciones de Bosh apagadas por un golpe de estado, Balaguer y sus d
 
 Quiza si Duarte hubiera plasmado su ideal gobernando 8 años como Washington, Sanchez y Mella 4 estariamos en una 
 Republica Dominicana muy diferente, quiza el Articulo del Padre Meriño de 1888 no aplicaria aun hoy en dia, quiza el Poema nacional
-del pais no hubiese sido una critica --se ha vuelto recurrente en mi hacer referencia al [Padre Meriño y a pedro Mir](/garden/seeds/dia-de-independencia-2019) pero es que es chocante que aun la mayoria de los parrafos apliquen todavia al sol de hoy-- quiza seria una Republica Dominicana mas honesta, mejor representada. O talves seria igual...eso nunca lo sabremos. 
+del pais no hubiese sido una critica --se ha vuelto recurrente en mi hacer referencia al [Padre Meriño y a Pedro Mir en [Dia de la independencia 2021](/garden/seeds/dia-de-independencia-2021) pero es que es chocante que aun la mayoria de los parrafos apliquen todavia al sol de hoy-- quiza seria una Republica Dominicana mas honesta, mejor representada. O talves seria igual...eso nunca lo sabremos. 

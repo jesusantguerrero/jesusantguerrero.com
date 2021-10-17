@@ -11,9 +11,15 @@ import 'tippy.js/dist/backdrop.css';
 import 'tippy.js/animations/shift-away.css';
 
 export default {
-    setup() {
+    props: {
+        includes: {
+            type: String, 
+            default: '/garden/seeds/'
+        },
+    },
+    setup(props) {
         const isSeedLink = (element) => {
-            return element.nodeName == 'A' && element.href.includes('/garden/seeds/')
+            return element.nodeName == 'A' && element.href.includes(props.includes)
         }
 
         const addListeners = () => {
@@ -26,14 +32,17 @@ export default {
                         content: 'Loading...',
                         allowHTML: true,
                         inertia: true,
-                        interactive: true,
                         plugins: [animateFill, followCursor],
                         placement: 'auto-end',
                         showOnCreate: true,
+                        maxWidth: 740,
                         onShow: async (instance) => {
                             hideAll();
-                            const data = await fetch(event.target.href).then(data => data.text()).then(data => data)
+                            const data = await fetch(event.target.href)
+                            .then(data => data.status == 200 ? data.text() : data.statusText)
+                            .then(data => data)
                             instance.setContent(data);
+                            
                         },
                         onHidden: () => {
                             tip.destroy();
@@ -44,7 +53,6 @@ export default {
         }
 
         onMounted(() => {
-            console.log("Hola")
             addListeners();
         })
     }
