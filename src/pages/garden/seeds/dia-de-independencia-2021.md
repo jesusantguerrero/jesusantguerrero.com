@@ -4,9 +4,9 @@ slug: "dia-de-independencia-2021"
 description: ''
 planted: '2021-02-27'
 author: 'Jesus Guerrero'
-tags: ['Historia Dominicana', 'Patria']
+tags: ['Historia Dominicana']
 language: 'spanish'
-status: seedling
+status: evergreen
 layout: '../../../layouts/GardenSeed.astro'
 ---
 

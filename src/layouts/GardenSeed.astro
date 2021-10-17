@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.vue"
+import SmartSeedPreview from "../components/SmartSeedPreview.vue"
 
 const { content } = Astro.props;
 ---
@@ -24,6 +25,7 @@ const { content } = Astro.props;
             </div>
             <section class="prose text-gray-500">
                 <slot />
+                <SmartSeedPreview client:load />
             </section>
         </article>
     </main>
