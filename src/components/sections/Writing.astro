@@ -6,15 +6,15 @@ import SectionTag from "../SectionTag.astro";
 const posts = await fetchPostsByUser('freesgen');
 ---
 <article class="px-4 project-section" id="writing">
-    <section class="flex flex-col personal-card md:flex-row">
-        <div class="w-4/12 personal-card_left">
+    <section class="flex flex-col section-card md:flex-row">
+        <div class="w-4/12 section-card_left">
             <SectionTag
                 title="Writing"
                 tags={["My latest posts"]}
             />
         </div>
 
-        <div class="px-4 mt-48 space-y-10 text-lg personal-card_body md:space-y-5 md:px-20 md:mt-0 md:w-8/12">
+        <div class="px-4 mt-48 space-y-10 text-lg section-card_body md:space-y-5 md:px-20 md:mt-0 md:w-8/12">
             { posts.map(post => (
                 <Project project={post} />
             ))}
@@ -30,7 +30,7 @@ const posts = await fetchPostsByUser('freesgen');
         width: 100%;
     }
     
-    section.personal-card {
+    section.section-card {
         display: flex;
         justify-content: center;
         align-items: center;
