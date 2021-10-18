@@ -11,7 +11,7 @@
   "devDependencies": {
     "@astrojs/renderer-vue": "^0.1.9",
     "@tailwindcss/typography": "^0.4.1",
-    "astro": "^0.19.4",
+    "astro": "^0.20.0",
     "autoprefixer": "^10.3.7",
     "postcss": "^8.3.9",
     "tailwindcss": "^2.2.17",

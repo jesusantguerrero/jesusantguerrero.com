@@ -7,7 +7,7 @@ author: 'Jesus Guerrero'
 tags: ['Productivity']
 language: 'english'
 status: seedling
-layout: '../../../layouts/GardenSeed.astro'
+layout: '../../../layouts/Seed.astro'
 ---
 
 In every step of a workflow, you will have views that let you see the information of what you want versus what you need to do to take you there.

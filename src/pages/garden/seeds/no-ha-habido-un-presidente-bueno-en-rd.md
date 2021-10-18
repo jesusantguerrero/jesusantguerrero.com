@@ -7,5 +7,7 @@ author: 'Jesus Guerrero'
 tags: ['Historia Dominicana']
 language: 'spanish'
 status: seedling
-layout: '../../../layouts/GardenSeed.astro'
+layout: '../../../layouts/Seed.astro'
 ---
+
+Pending

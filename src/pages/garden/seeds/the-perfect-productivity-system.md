@@ -7,7 +7,7 @@ author: 'Jesus Guerrero'
 tags: ['Productivity']
 language: 'english'
 status: seedling
-layout: '../../../layouts/GardenSeed.astro'
+layout: '../../../layouts/Seed.astro'
 ---
 
 Every person that wants to improve their time management skills dreams about finding the right productivity tool for their case.

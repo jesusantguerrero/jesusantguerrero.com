@@ -6,7 +6,7 @@ import GardenSeedPreview, { GardenSeed } from "../../components/GardenSeedPrevie
 let title = "Garden";
 let GardenSeeds = Astro.fetchContent<GardenSeed>('./seeds/*.md');
 ---
-<Page title={title} show-title={true}>
+<Page title={title} showLogo={true}>
     <article class="max-w-5xl pt-20 mx-auto overflow-visible text-left text-gray-700">
         <h2 class="mb-8 text-xl font-bold text-gray-500">Welcome to my Digital Garden</h2>
         <section class="prose text-gray-500 ">

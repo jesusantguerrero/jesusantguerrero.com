@@ -7,7 +7,7 @@ author: 'Jesus Guerrero'
 tags: ['Historia Dominicana']
 language: 'spanish'
 status: evergreen
-layout: '../../../layouts/GardenSeed.astro'
+layout: '../../../layouts/Seed.astro'
 ---
 
 El sueño de Cáceres, la inspiración de Duarte de aires de libertad en suelos europeos, la entrega y lucha de los trinitarios, la determinación de los que recuperaron la patria vendida por unos títulos al "marques de las carreras" la valentía de aquellos que encarnaron la justicia en el 61, los que tomaron las armas en el 65. Con la frente en alto creo que efectivamente 1000 veces sabríamos ser libre e independientes.
