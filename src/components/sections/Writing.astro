@@ -1,40 +1,18 @@
 ---
 import { fetchPostsByUser } from "../../utils/apis.ts";
 import Project from "../Project.astro";
-import SectionTag from "../SectionTag.astro";
+import BlockSection from "./BlockSection.astro";
 
 const posts = await fetchPostsByUser('freesgen');
 ---
-<article class="px-4 project-section" id="writing">
-    <section class="flex flex-col section-card md:flex-row">
-        <div class="w-4/12 section-card_left">
-            <SectionTag
-                title="Writing"
-                tags={["My latest posts"]}
-            />
-        </div>
-
-        <div class="px-4 mt-48 space-y-10 text-lg md:space-y-5 md:px-20 md:mt-0 md:w-8/12">
-            { posts.map(post => (
-                <Project project={post} />
-            ))}
-        </div>
-    </section>
-</article>
-
-<style lang="scss">
-    article {
-        @apply bg-white;
-         color: var(--text-color);
-        display: flex;
-        align-items: center;
-        width: 100%;
-    }
-    
-    section.section-card {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        @apply w-11/12 md:w-8/12 max-w-6xl mx-auto relative;
-    }
-</style>
+<BlockSection 
+    id="writing"
+    title="Writing"
+    tags={["My latest posts"]}
+>
+    <div class="mt-10 space-y-5">
+        { posts.map(post => (
+            <Project project={post} className="w-full" />
+        ))}
+    </div>
+</BlockSection>

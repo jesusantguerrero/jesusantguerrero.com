@@ -2,44 +2,17 @@
 import { Markdown } from 'astro/components';
 import { more } from "../../utils/curriculum.ts";
 import Project from "../Project.astro";
-import SectionTag from "../SectionTag.astro";
+import BlockSection from "./BlockSection.astro";
 
 ---
-<article class="project-section" id="more">
-    <section class="flex flex-col section-card md:flex-row">
-        <div class="w-4/12 section-card_left">
-            <SectionTag
-                title="More"
-                tags={["My Digital Garden", "Books", "PlayList"]}
-            />
-        </div>
-
-        <div class="px-10 mt-48 space-y-10 text-lg text-gray-400 section-card_body md:space-y-5 md:px-20 md:mt-0 md:w-8/12">
-            <Markdown>
-                Eventually I want to go beyond a simple portfolio with this project and set it as my personal space here in internet
-            </Markdown>
-            
-            { more.map(post => (
-                <Project project={post} />
-            ))}
-        </div>
-    </section>
-</article>
-
-<style lang="scss">
-    article {
-        @apply bg-white;
-        display: flex;
-        align-items: center;
-        width: 100%;
-    }
-    
-    section.section-card {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 80%;
-        width: 80%;
-        @apply max-w-6xl mx-auto relative;
-    }
-</style>
+<BlockSection 
+    id="more"
+    title="More"
+    tags={["My Digital Garden", "Books", "PlayList"]}
+>   
+    <div class="mt-10 space-y-5">
+        { more.map(post => (
+            <Project project={post} />
+        ))}
+    </div>
+</BlockSection>

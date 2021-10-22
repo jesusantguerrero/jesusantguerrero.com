@@ -4,45 +4,16 @@ import Project from "../Project.astro";
 import SearchBox from "../SearchBox.vue";
 import BlockSection from "./BlockSection.astro";
 ---
-<BlockSection 
-    class="px-4 project-section" 
+<BlockSection
     id="projects"
     title="Projects"
     tags={["Some of the stuff I'm most proud about"]}    
 >  
-    <div class="px-10">
-        <SearchBox text="Some of my projects" client:visible />
-    </div>
-    <div class="px-10 mt-10 space-y-5">
+    <SearchBox text="Some of my projects" client:visible />
+    
+    <div class="mt-10 space-y-5">
         { portfolio.map(project => (
             <Project project={project} target="_blank" />
         ))}
     </div>
 </BlockSection>
-
-<style lang="scss">
-    article {
-        @apply bg-white;
-        color: var(--text-color);
-        display: flex;
-        align-items: center;
-        width: 100%;
-        min-height: 100vh;
-    }
-    
-    section.section-card {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 80%;
-        @apply max-w-6xl mx-auto relative;
-
-
-        .section-card_name {
-            color: dodgerblue;
-            position: absolute;
-        }
-    }
-    
-
-</style>

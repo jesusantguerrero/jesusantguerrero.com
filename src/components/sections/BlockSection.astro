@@ -1,8 +1,13 @@
 ---
 import SectionTag from "../SectionTag.astro";
-const { title, tags} = Astro.props;
+interface Props {
+    title: string;
+    tags?: string[];
+    id?: string
+}
+const { title, tags, id} = Astro.props;
 ---
-<article class="px-4 project-section" id="projects">
+<article class="px-4 project-section" id={id}>
     <section class="flex flex-col section-card md:flex-row">
         <div class="w-4/12 section-card_left">
             <SectionTag
@@ -10,7 +15,7 @@ const { title, tags} = Astro.props;
                 tags={tags}
             />
         </div>
-        <div class="px-4 mt-48 space-y-10 text-lg section-card_body md:space-y-5 md:px-20 md:mt-0 md:w-8/12">
+        <div class="px-4 mt-48 text-lg section-card_body md:space-y-5 md:mt-0 md:w-8/12">
             <slot />
         </div>
     </section>

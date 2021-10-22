@@ -8,9 +8,10 @@ export interface Props {
     project: Project,
     target?: string,
     link?: string,
+    className?: string,
 }
 
-const { project, target, link } = Astro.props;
+const { project, target, link, className } = Astro.props;
 
 const icon = () => {
     let icon: string;
@@ -24,7 +25,7 @@ const icon = () => {
     return icon;
 }
 ---
-<a href={project.link || link} target={target} class="block no-underline border-0 border-b-0">
+<a href={project.link || link} target={target} class={`block overflow-hidden no-underline whitespace-pre-wrap border-0 border-b-0 ${className}`}>
     <div class="px-10 py-5 text-gray-400 transition transform border border-gray-100 rounded-lg cursor-pointer hover:text-gray-500 hover:bg-gray-50 hover:scale-105">
         <h4 class="font-bold ">{project.title} {(icon())}</h4>
         <p class="mt-2 text-sm "> { project.description }</p>
