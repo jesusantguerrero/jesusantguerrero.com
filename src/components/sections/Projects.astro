@@ -13,7 +13,7 @@ import BlockSection from "./BlockSection.astro";
     
     <div class="mt-10 space-y-5">
         { portfolio.map(project => (
-            <Project project={project} target="_blank" />
+            <Project project={project} projectType="code" target="_blank" />
         ))}
     </div>
 </BlockSection>
