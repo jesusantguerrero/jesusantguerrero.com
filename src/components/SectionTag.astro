@@ -8,10 +8,10 @@ export interface Props {
 const { title, subtitle, tags } = Astro.props;
 ---
 
-<div class="text-5xl font-bold section-tag top-8 md:top-1/4 md:text-5xl -left-3 md:-left-5 lg:-left-9">
+<div class="text-5xl font-bold section-tag top-8 md:top-0 md:text-5xl -left-3 md:-left-5 lg:-left-9">
     <p class="">{ title }</p>
     <p class="mb-0 pl-14">{ subtitle }</p>
-    <p class="mt-5 text-sm pl-14">
+    <p class="mt-5 text-sm pl-14 md:max-w-2xl">
         { tags.join(' / ')}
     </p>
 </div>

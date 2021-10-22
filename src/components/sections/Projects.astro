@@ -2,28 +2,23 @@
 import { portfolio } from "../../utils/curriculum.ts";
 import Project from "../Project.astro";
 import SearchBox from "../SearchBox.vue";
-import SectionTag from "../SectionTag.astro";
+import BlockSection from "./BlockSection.astro";
 ---
-<article class="px-4 project-section" id="projects">
-    <section class="flex flex-col section-card md:flex-row">
-        <div class="w-4/12 section-card_left">
-            <SectionTag
-                title="Projects"
-                tags={["Some of the stuff I'm most proud about"]}
-            />
-        </div>
-        <div class="px-4 mt-48 text-lg section-card_body md:space-y-5 md:px-20 md:mt-0 md:w-8/12">
-            <div class="px-10">
-                <SearchBox text="Some of my projects" client:visible />
-            </div>
-            <div class="px-10 mt-10 space-y-5">
-                { portfolio.map(project => (
-                    <Project project={project} target="_blank" />
-                ))}
-            </div>
-        </div>
-    </section>
-</article>
+<BlockSection 
+    class="px-4 project-section" 
+    id="projects"
+    title="Projects"
+    tags={["Some of the stuff I'm most proud about"]}    
+>  
+    <div class="px-10">
+        <SearchBox text="Some of my projects" client:visible />
+    </div>
+    <div class="px-10 mt-10 space-y-5">
+        { portfolio.map(project => (
+            <Project project={project} target="_blank" />
+        ))}
+    </div>
+</BlockSection>
 
 <style lang="scss">
     article {

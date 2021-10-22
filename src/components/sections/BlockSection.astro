@@ -1,23 +1,17 @@
 ---
-import { fetchPostsByUser } from "../../utils/apis.ts";
-import Project from "../Project.astro";
 import SectionTag from "../SectionTag.astro";
-
-const posts = await fetchPostsByUser('freesgen');
+const { title, tags} = Astro.props;
 ---
-<article class="px-4 project-section" id="writing">
+<article class="px-4 project-section" id="projects">
     <section class="flex flex-col section-card md:flex-row">
         <div class="w-4/12 section-card_left">
             <SectionTag
-                title="Writing"
-                tags={["My latest posts"]}
+                title={title}
+                tags={tags}
             />
         </div>
-
-        <div class="px-4 mt-48 space-y-10 text-lg md:space-y-5 md:px-20 md:mt-0 md:w-8/12">
-            { posts.map(post => (
-                <Project project={post} />
-            ))}
+        <div class="px-4 mt-48 space-y-10 text-lg section-card_body md:space-y-5 md:px-20 md:mt-0 md:w-8/12">
+            <slot />
         </div>
     </section>
 </article>
@@ -25,10 +19,11 @@ const posts = await fetchPostsByUser('freesgen');
 <style lang="scss">
     article {
         @apply bg-white;
-         color: var(--text-color);
+        color: var(--text-color);
         display: flex;
         align-items: center;
         width: 100%;
+        min-height: 100vh;
     }
     
     section.section-card {

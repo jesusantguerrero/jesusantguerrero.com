@@ -3,29 +3,31 @@ import { Markdown } from 'astro/components';
 import SectionTag  from "../SectionTag.astro";
 ---
 <article class="intro-section" id="about">
-    <section class="flex flex-col pb-10 personal-card md:pb-0 md:flex-row">
-        <div class="w-4/12 mt-10 personal-card_left">
-            <SectionTag 
-                title="Jesus" 
-                subtitle="Guerrero"
-                tags={['Full-Stack Developer', 'Software Engineer', 'Creator']}
-            />
-        </div>
+    <section class="flex flex-col items-center pb-10 rounded-md personal-card md:pb-0 md:flex-row">
+        <div class="flex">
+            <div class="relative w-4/12">
+                <SectionTag 
+                    title="Jesus" 
+                    subtitle="Guerrero"
+                    tags={['Full-Stack Developer', 'Software Engineer', 'Creator']}
+                />
+            </div>
 
-        <div class="px-10 mt-64 space-y-10 text-lg text-gray-500 personal-card_body md:space-y-5 md:px-20 md:mt-0 md:w-8/12">
-            <Markdown>         
-                I'm a system engineer and full-stack developer from Dominican Republic who is 
-                passionate about programming in general, web development and [Vue.js](https://v3.vuejs.org). Currently working at 
-                [MCTekk](https://mctekk.com) mostly doing frontend development.
-            </Markdown>
-            <p class="hidden md:block">
-                I love to learn new things, share knowledge and create (apps, poetry). 
-                When not, I am singing Bob Marley's songs.
-            </p>
+            <div class="px-10 mt-64 space-y-10 text-lg text-gray-500 personal-card_body md:space-y-5 md:px-20 md:mt-0 md:w-8/12">
+                <Markdown>         
+                    I'm a system engineer and full-stack developer from Dominican Republic who is 
+                    passionate about programming in general, web development and [Vue.js](https://v3.vuejs.org). Currently working at 
+                    [MCTekk](https://mctekk.com) mostly doing frontend development.
+                </Markdown>
+                <p class="hidden md:block">
+                    I love to learn new things, share knowledge and create (apps, poetry). 
+                    When not, I am singing Bob Marley's songs.
+                </p>
 
-            <Markdown>
-                Find me on [Twitter](https://github.com/antfu/vitesse), [Github](), [Dev.to](https://dev.to/jesusantguerrero) or [Hashnode](https://freesgen.hashnode.dev).
-            </Markdown>
+                <Markdown>
+                    Find me on [Twitter](https://github.com/antfu/vitesse), [Github](), [Dev.to](https://dev.to/jesusantguerrero) or [Hashnode](https://freesgen.hashnode.dev).
+                </Markdown>
+            </div>
         </div>
     </section>
 </article>
@@ -44,7 +46,7 @@ import SectionTag  from "../SectionTag.astro";
         justify-content: center;
         align-items: center;
         height: 80%;
-        width: 100%;
+        width: calc(100% - 120px);
         margin: auto;
         position: relative;
         @apply bg-gray-50 
@@ -55,12 +57,12 @@ import SectionTag  from "../SectionTag.astro";
         &:after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: -3px;
             right: 20%;
             height: 0;
             width: 0;
             border-bottom: 30px solid var(--darken-primary-color);
-            @apply border-white;
+            @apply border-white z-10;
             border-right: 50px solid transparent;
             border-left: 50px solid transparent;
             border-top: 50px solid transparent;
@@ -75,6 +77,7 @@ import SectionTag  from "../SectionTag.astro";
         section.personal-card {
             width: 90%;
             height: 95%;
+            margin-top: 60px;
 
              &:after {
                 bottom: 0;
