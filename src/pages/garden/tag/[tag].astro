@@ -7,14 +7,8 @@ const { tag } = Astro.request.params;
 let GardenSeeds = Astro.fetchContent<GardenSeed>('../seeds/*.md');
 GardenSeeds = GardenSeeds.filter(seed => seed.tags.includes(tag))
 export async function getStaticPaths() {
-    return [
-        {params: { tag: 'Historia Dominicana' }},
-        {params: { tag: 'Programming' }},
-        {params: { tag: 'Productivity' }},
-        {params: { tag: 'Religion' }},
-        {params: { tag: 'Thoughts' }},
-        {params: { tag: 'Theology' }}
-    ];
+    const tags = ['Historia Dominicana', 'Programming', 'Productivity', 'Religion', 'Thoughts', 'Theology' ,'Web Development', 'Blockchain', 'Solidity', 'Web3'];
+    return tags.map( tag => ({params: { tag}}));
 }
 ---
 <Page title={title}>
@@ -26,7 +20,7 @@ export async function getStaticPaths() {
 
         <section class="flex px-2 mt-10 space-x-2">
             {GardenSeeds.map( seed => 
-                <a href={`/garden/seeds/${seed.slug}`}><GardenSeedPreview seed={seed} class="max-w-md" /></a>)}
+                <a href={`/garden/seeds/${seed.slug}`}><GardenSeedPreview seed={seed} classes="max-w-md" /></a>)}
         </section>
     </article>
 </Page>
