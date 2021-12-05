@@ -1,7 +1,7 @@
 ---
 title: 'Pillars of web3'
 slug: "pillars-of-web3"
-description: 'Aspects to take into account to learn web3'
+description: ' 4 key aspects to take into account to learn web3'
 planted: '2021-10-28'
 author: 'Jesus Guerrero'
 tags: ['Web Development', 'Blockchain', 'Solidity', 'Web3']
