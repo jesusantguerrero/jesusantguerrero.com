@@ -1,9 +1,10 @@
 ---
 import Header from "../components/Header.vue"
 import SmartSeedPreview from "../components/SmartSeedPreview.vue"
-import { GardenSeed } from "../components/GardenSeedPreview.astro";
 const { content } = Astro.props;
-
+const postURL = "https://jesusantguerrero.netlify.app/"
+const webMentions = await fetch(`https://webmention.io/api/count.json?target=${postURL}/`).then(res => res.json());
+console.log(webMentions);
 ---
 <html lang="en">
 <head>
@@ -27,6 +28,14 @@ const { content } = Astro.props;
             <section class="prose text-gray-500 seed-article">
                 <slot />
                 <SmartSeedPreview client:load />
+            </section>
+            <section>
+                { webMentions.count > 0 && <div class="text-sm text-gray-500">
+                    <a href={`https://webmention.io/${postURL}/`}>
+                        <i class="text-green-500 fa fa-comments"></i>
+                        {webMentions.total}
+                    </a>
+                </div> }
             </section>
         </article>
     </main>
