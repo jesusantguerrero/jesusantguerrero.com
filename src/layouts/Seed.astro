@@ -1,8 +1,10 @@
 ---
 import Header from "../components/Header.vue"
 import SmartSeedPreview from "../components/SmartSeedPreview.vue"
+import Webmentions from "../components/Webmentions.astro"
 const { content } = Astro.props;
-const postURL = "https://jesusantguerrero.netlify.app/"
+
+const postURL = "https://jesusantguerrero.netlify.app"
 const webMentions = await fetch(`https://webmention.io/api/count.json?target=${postURL}/`).then(res => res.json());
 console.log(webMentions);
 ---
@@ -13,6 +15,7 @@ console.log(webMentions);
     <title>{content.title}</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href={Astro.resolve("../styles/global.css")}>
+     <Webmentions />
 </head>
 <body>
     <main class="mb-20">
