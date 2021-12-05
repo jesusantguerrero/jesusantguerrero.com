@@ -37,7 +37,7 @@ const getIcon = (status) => {
         </div>
         <a href={`/garden/seeds/${seed.slug}`} class="block">{seed.title} </a>
     </h4>
-    { seed.description && <p class="mt-2 text-sm"> seed.description </p>}
+    { seed.description && <p class="mt-2 text-sm"> {seed.description} </p>}
     <div class="flex items-center justify-between ">
         <div class="text-left language-container">
             <div class="space-x-2 "> { seed.tags && seed.tags.map(tag => (
