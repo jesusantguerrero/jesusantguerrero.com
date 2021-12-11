@@ -22,6 +22,11 @@ export default {
             return element.nodeName == 'A' && element.href.includes(props.includes)
         }
 
+        const addWebMentions = () => {
+            const links = document.querySelectorAll('a');
+            links.forEach(link => link.relList.add("webmention"));
+        }
+
         const addListeners = () => {
             const links = document.querySelector('section');
             links.addEventListener('mouseover', async (event) => {
@@ -54,6 +59,7 @@ export default {
 
         onMounted(() => {
             addListeners();
+            addWebMentions();
         })
     }
 }

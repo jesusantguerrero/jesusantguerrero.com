@@ -4,8 +4,9 @@ import SmartSeedPreview from "../components/SmartSeedPreview.vue"
 import Webmentions from "../components/Webmentions.astro"
 const { content } = Astro.props;
 
-const postURL = "https://jesusantguerrero.netlify.app"
-const webMentions = await fetch(`https://webmention.io/api/count.json?target=${postURL}/`).then(res => res.json());
+const postURL = "https://jesusantguerrero.netlify.app" + Astro.request.canonicalURL.pathname
+const WebmentionEndpoint = "https://webmention.io/api/mentions.jf2?"
+const webMentions = await fetch(`${WebmentionEndpoint}target=${postURL}`).then(res => res.json());
 console.log(webMentions);
 ---
 <html lang="en">
@@ -15,28 +16,29 @@ console.log(webMentions);
     <title>{content.title}</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href={Astro.resolve("../styles/global.css")}>
-     <Webmentions />
+    <link rel="pingback" href={`https://webmention.io/webmention?forward=${postURL}/webmention`} />
+    <Webmentions />
 </head>
 <body>
     <main class="mb-20">
-        <Header client:visible show-title={true} />
+        <Header client:visible show-logo={true} />
         <article class="max-w-5xl pt-20 mx-auto overflow-visible">
             <h1 class="mb-1 text-xl font-bold text-gray-400"> {content.title }</h1>
-            <div class="flex mb-5 space-x-5 text-sm text-gray-300">
-                <div>Status: <i class="text-green-500 fa fa-seedling"></i> </div>
+            <div class="flex mb-5 space-x-5 text-sm text-gray-500">
+                <div>Status: <span class="text-green-500 font-bold"><i class="fa fa-seedling"/>{content.status}</span> </div>
                 <div>Expertise: </div>
-                <div>PlantDate: {content.planted} </div>
-                <div>Last Update: {content.checked || content.planted }</div>
+                <div>PlantDate: <span class="text-accent-400 font-bold">{content.planted}</span></div>
+                <div>Last Update: <span class="text-accent-400 font-bold">{content.checked || content.planted }</span></div>
             </div>
             <section class="prose text-gray-500 seed-article">
                 <slot />
                 <SmartSeedPreview client:load />
             </section>
             <section>
-                { webMentions.count > 0 && <div class="text-sm text-gray-500">
+                { webMentions.children.length && <div class="text-sm text-gray-500">
                     <a href={`https://webmention.io/${postURL}/`}>
                         <i class="text-green-500 fa fa-comments"></i>
-                        {webMentions.total}
+                        {webMentions.children}
                     </a>
                 </div> }
             </section>

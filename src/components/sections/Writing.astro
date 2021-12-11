@@ -10,9 +10,12 @@ const posts = await fetchPostsByUser('freesgen');
     title="Writing"
     tags={["My latest posts"]}
 >
-    <div class="mt-10 space-y-5">
+    <div class="mt-10 space-y-5 mb-5">
         { posts.map(post => (
             <Project project={post} projectType="article" className="w-full" />
         ))}
+        <div class="w-full">
+            <button class="mx-auto bg-primary-500 shadow-lg shadow-primary-500/50 text-white px-5 rounded-md py-2">See my posts on Dev.to</button>
+        </div>
     </div>
 </BlockSection>

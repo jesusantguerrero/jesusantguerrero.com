@@ -18,12 +18,13 @@ const icon = () => {
     let icon: string;
     switch (target) {
         case '_blank':
-            icon = <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16"><g fill="none"><path d="M9.5 4h1a3.5 3.5 0 0 1 .194 6.995l-.192.005l-1 .005a.5.5 0 0 1-.094-.992l.09-.008L10.5 10a2.5 2.5 0 0 0 .164-4.995L10.5 5h-1a.5.5 0 0 1-.09-.992L9.5 4h1h-1zm-4 0h1a.5.5 0 0 1 .09.992L6.5 5h-1a2.5 2.5 0 0 0-.164 4.995L5.5 10h1a.5.5 0 0 1 .09.992L6.5 11h-1a3.5 3.5 0 0 1-.192-6.995L5.5 4h1h-1zm0 3l5 .002a.5.5 0 0 1 .09.992l-.09.008L5.5 8a.5.5 0 0 1-.09-.992L5.5 7z" fill="currentColor"></path></g></svg>
+            icon = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16"><g fill="none"><path d="M9.5 4h1a3.5 3.5 0 0 1 .194 6.995l-.192.005l-1 .005a.5.5 0 0 1-.094-.992l.09-.008L10.5 10a2.5 2.5 0 0 0 .164-4.995L10.5 5h-1a.5.5 0 0 1-.09-.992L9.5 4h1h-1zm-4 0h1a.5.5 0 0 1 .09.992L6.5 5h-1a2.5 2.5 0 0 0-.164 4.995L5.5 10h1a.5.5 0 0 1 .09.992L6.5 11h-1a3.5 3.5 0 0 1-.192-6.995L5.5 4h1h-1zm0 3l5 .002a.5.5 0 0 1 .09.992l-.09.008L5.5 8a.5.5 0 0 1-.09-.992L5.5 7z" fill="currentColor"></path></g></svg>';
             break;
         default:
+            icon = ''
             break;
     }
-    return <div class="w-5 h-5 ml-2 text-dodgerblue-400">{icon}</div>;
+    return `<div class="w-5 h-5 ml-2 text-dodgerblue-400">${icon}</div>`;
 }
 
 const typeIcon = () => {
@@ -31,26 +32,26 @@ const typeIcon = () => {
     const title: string = projectType || 'evergreen';
     switch (projectType) {
         case 'article':
-            icon = <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z" fill="currentColor"></path><path d="M14 17H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="currentColor"></path></svg>
+            icon = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z" fill="currentColor"></path><path d="M14 17H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" fill="currentColor"></path></svg>';
             break;
         case 'code':
-            icon =<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8l-4 4l4 4"></path><path d="M17 8l4 4l-4 4"></path><path d="M14 4l-4 16"></path></g></svg>
+            icon ='<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8l-4 4l4 4"></path><path d="M17 8l4 4l-4 4"></path><path d="M14 4l-4 16"></path></g></svg>';
             break;
         default:
             icon = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512"><path d="M64 96H0c0 123.7 100.3 224 224 224v144c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V320C288 196.3 187.7 96 64 96zm384-64c-84.2 0-157.4 46.5-195.7 115.2c27.7 30.2 48.2 66.9 59 107.6C424 243.1 512 147.9 512 32h-64z" fill="currentColor"></path></svg>'
             break;
     }
-    return <div class="w-6 h-6 mr-2" title={title}>{icon}</div>;
+    return `<div class="w-6 h-6 mr-2" title="${title}">${icon}</div>`;
 }
 ---
-<a href={project.link || link} target={target} class={`block no-underline whitespace-pre-wrap border-0 border-b-0 ${className}`}>
+<a href={project.link || link} target={target} class={`block no-underline border-0 border-b-0 ${className}`}>
     <div class="w-full px-10 py-5 overflow-hidden text-gray-400 transition transform border border-gray-100 rounded-lg cursor-pointer hover:text-gray-500 hover:bg-gray-50 hover:scale-105">
         <h4 class="flex items-center font-bold">
             {typeIcon()}
-            {project.title} 
+            <span> {project.title} </span>
             {(icon())}
         </h4>
-        <p class="mt-2 text-sm "> { project.description }</p>
+        <p class="mt-2 text-sm whitespace-pre-wrap"> { project.description }</p>
         <p class="space-x-2"> { project.technologies && project.technologies.map(tech => (
             <span class="py-1 text-xs rounded-md text-accent-500">{ tech }</span>
         ))}</p>
