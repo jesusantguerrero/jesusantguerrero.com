@@ -14,8 +14,8 @@ const posts = await fetchPostsByUser('freesgen');
         { posts.map(post => (
             <Project project={post} projectType="article" className="w-full" />
         ))}
-        <div class="w-full">
-            <button class="mx-auto bg-primary-500 shadow-lg shadow-primary-500/50 text-white px-5 rounded-md py-2">See my posts on Dev.to</button>
+        <div class="w-full flex justify-center">
+            <a href="https://dev.to/jesusantguerrero" target="_blank" class="mx-auto transition hover:bg-primary-400 bg-primary-500 shadow-lg shadow-primary-500/50 text-white px-5 rounded-md py-2">See my posts on Dev.to</a>
         </div>
     </div>
 </BlockSection>
