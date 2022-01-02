@@ -3,7 +3,7 @@ import { fetchPostsByUser } from "../../utils/apis.ts";
 import Project from "../Project.astro";
 import BlockSection from "./BlockSection.astro";
 
-const posts = await fetchPostsByUser('freesgen');
+const posts = await fetchPostsByUser('jesusantguerrero');
 ---
 <BlockSection 
     id="writing"
@@ -12,7 +12,7 @@ const posts = await fetchPostsByUser('freesgen');
 >
     <div class="mt-10 space-y-5 mb-5">
         { posts.map(post => (
-            <Project project={post} projectType="article" className="w-full" />
+            <Project project={post} projectType="article" className="w-full" target="_blank"/>
         ))}
         <div class="w-full flex justify-center">
             <a href="https://dev.to/jesusantguerrero" target="_blank" class="mx-auto transition hover:bg-primary-400 bg-primary-500 shadow-lg shadow-primary-500/50 text-white px-5 rounded-md py-2">See my posts on Dev.to</a>

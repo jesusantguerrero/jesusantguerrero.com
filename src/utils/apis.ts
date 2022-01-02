@@ -1,4 +1,5 @@
 const HASHNODE_URL = 'https://api.hashnode.com/';
+const DEVTO_URL = 'https://dev.to/api/';
 
 export const HASHNODE_QUERY_ACCOUNT = `
 query getAccount($user: String!) {
@@ -31,22 +32,28 @@ export const fetchGQL = async (query, variables = {}) => {
   })
 }
 
+const fetchDevtoPosts = async (username) => {
+  const response = await fetch(`${DEVTO_URL}/articles?username=${username}`);
+  const data = await response.json();
+  return data;
+}
+
 /**
  * fetch hashnode account and publication information of a given user
  * @param {string} user
  * @returns {Promise<HashnodeUser>}
  */
 export const fetchPostsByUser = async (user) => {
-  const response = await fetchGQL(HASHNODE_QUERY_ACCOUNT, { user });
-  const data = await response.json();
-  return data.data.user.publication.posts.map(mapToPost) || [];
+  const posts = await fetchDevtoPosts(user);
+  return posts.map(mapToPost) || [];
 }
 
 function mapToPost(post) {
     return {
         title: post.title,
-        description: post.brief,
-        url: `https://hashnode.com/${post.slug}`,
-        image: post.coverImage
+        description: post.description,
+        link: post.url,
+        image: post.cover_image,
+        date: post.published_timestamp,
     }
 }
