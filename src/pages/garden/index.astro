@@ -7,9 +7,9 @@ let title = "Garden";
 let GardenSeeds = Astro.fetchContent<GardenSeed>('./seeds/*.md');
 ---
 <Page title={title} showLogo={true}>
-    <article class="max-w-5xl pt-20 mx-auto overflow-visible text-left text-gray-700">
+    <article class="prose max-w-4xl pt-20 mx-auto overflow-visible text-left text-gray-700">
         <h2 class="mb-8 text-xl font-bold text-gray-500">Welcome to my Digital Garden</h2>
-        <section class="prose text-gray-500 ">
+        <section class="text-gray-500 mx-auto">
             <Markdown>
                 This is a collection of thoughts, notes, resources and explorations I'm currently cultivating. I let myself immerse in some topics of my interest even out of tech.
             </Markdown>
