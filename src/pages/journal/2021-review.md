@@ -10,7 +10,7 @@ published: '2021-12-31'
 updated: '2021-12-31'
 ---
 
-This is my first year of doing a year in review. This have been by far my most productive years so far in all aspects of life so I thing it deserve to have an spot here in my personal space.
+This is my first year of doing "a year in review". This have been by far my most productive year so far in all aspects of life so I think it deserves an spot here in my personal space.
 
 ## Development:
 - I participated in my first hackathon ever [Vercel+Hashnode Hackathon](https://freesgen.hashnode.dev/introduction-to-zen) and launched my side project with most users so far with [zen](https://github.com/jesusantguerrero/zen).
