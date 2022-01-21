@@ -12,14 +12,19 @@ export default {
     // port: 3000,             // The port to run the dev server on.
     tailwindConfig: './tailwind.config.js',     // Path to tailwind.config.js if used, e.g. './tailwind.config.js'
   },
-  // markdownOptions: {
-  //   remarkPlugins: [
-  //     ['remark-autolink-heading', { behavior: 'prepend'}]
-  //   ],
-  //   rehypePlugins: [
-  //     ['rehype-autolink-heading', { behavior: 'prepend'}]
-  //   ]
-  // },
+  markdownOptions: {
+    render: [
+      '@astrojs/markdown-remark',
+      {
+        remarkPlugins: [
+          ['remark-gfm'],
+          ['remark-smartypants'],
+          ['astro-remark-digital-garden', {
+            seedsPath: '/garden/seeds/'
+          }],
+      ],
+    }],
+  },
   renderers: [
     "@astrojs/renderer-vue"
   ],

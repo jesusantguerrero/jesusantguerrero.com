@@ -16,5 +16,8 @@
     "postcss": "^8.4.4",
     "tailwindcss": "^3.0.0",
     "tippy.js": "^6.3.2"
+  },
+  "dependencies": {
+    "astro-remark-digital-garden": "^0.1.0"
   }
 }
