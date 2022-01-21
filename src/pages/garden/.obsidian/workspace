@@ -1,0 +1,104 @@
+{
+  "main": {
+    "id": "1b7a8f10c6385dcf",
+    "type": "split",
+    "children": [
+      {
+        "id": "a44e33d3baf83bb2",
+        "type": "leaf",
+        "state": {
+          "type": "graph",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c06c0920b175597d",
+    "type": "split",
+    "children": [
+      {
+        "id": "a2106d39e4258611",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a0bc51d51f4d157d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "3314d14dfb7201fa",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e4c9855a876f33c3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "21c21210fc4f1e6d",
+    "type": "split",
+    "children": [
+      {
+        "id": "914aa1ba9eff8b46",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f8acd8fcd2437257",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "a44e33d3baf83bb2",
+  "lastOpenFiles": [
+    "seeds/thoughts-on-web-3.md",
+    "seeds/the-perfect-productivity-system-should-have-short-steps.md",
+    "seeds/the-perfect-productivity-system-should-have-no-more-than-3-views.md",
+    "seeds/the-perfect-productivity-system.md",
+    "seeds/pillars-of-web3.md",
+    "seeds/sobre-dios.md",
+    "seeds/no-ha-habido-un-presidente-bueno-en-rd.md",
+    "seeds/my-roadmap-on-web3.md",
+    "seeds/error-fundacion-dominicana.md",
+    "seeds/dia-de-independencia-2021.md"
+  ]
+}
