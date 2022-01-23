@@ -108,8 +108,30 @@ export const projects: Record<string, IProjectSection > = {
   vue: {
     title: 'Vue.js Ecosystem',
     list: [{
-      
-    }]
+      title: 'lumiere',
+      technologies: ['Vue', 'Vuetify', 'Firebase', 'Firestore', 'Firebase Auth', 'Firebase Functions'],
+      description: 'Vue.js app to manage your finances.',
+      image: '',
+      link: 'https://github.com/jesusantguerrero/lumiere',
+      type: 'template',
+    },
+    {
+        title: 'lumiere-utils (WIP)',
+        technologies: ['Vue', 'Firebase', 'supabase'],
+        description: 'Abstraction of Firebase and Supabase providers to build frontent apps with Lumiere.',
+        image: '',
+        link: 'https://github.com/jesusantguerrero/lumiere-utils',
+        type: 'template',
+    },
+    {
+      title: 'atmosphere-ui',
+      technologies: ['Vue', 'storybook','jest','vue-testing-library'],
+      description: 'Vue.js app to manage your finances.',
+      image: '',
+      link: '',
+      type: 'template',
+    }
+  ]
   },
   web3: {
     title: 'Web3.js Ecosystem',
