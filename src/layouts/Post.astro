@@ -1,13 +1,7 @@
 ---
 import Header from "../components/Header.vue"
-import SmartSeedPreview from "../components/SmartSeedPreview.vue"
-import Webmentions from "../components/Webmentions.astro"
 const { content } = Astro.props;
 
-const postURL = "https://jesusantguerrero.netlify.app" + Astro.request.canonicalURL.pathname
-const WebmentionEndpoint = "https://webmention.io/api/mentions.jf2?"
-const webMentions = await fetch(`${WebmentionEndpoint}target=${postURL}`).then(res => res.json());
-console.log(webMentions);
 ---
 <html lang="en">
 <head>
@@ -16,8 +10,6 @@ console.log(webMentions);
     <title>{content.title}</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href={Astro.resolve("../styles/global.css")}>
-    <link rel="pingback" href={`https://webmention.io/webmention?forward=${postURL}/webmention`} />
-    <Webmentions />
 </head>
 <body>
     <main class="mb-20">
@@ -30,15 +22,6 @@ console.log(webMentions);
             </div>
             <section class="prose text-gray-500 seed-article">
                 <slot />
-                <SmartSeedPreview client:load />
-            </section>
-            <section>
-                { webMentions.children.length && <div class="text-sm text-gray-500">
-                    <a href={`https://webmention.io/${postURL}/`}>
-                        <i class="text-green-500 fa fa-comments"></i>
-                        {webMentions.children}
-                    </a>
-                </div> }
             </section>
         </article>
     </main>
