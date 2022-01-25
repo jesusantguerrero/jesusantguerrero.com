@@ -73,6 +73,7 @@ Cryptocurrencies are the fuel of Web3 they move the economy, they move the smart
 
 [Binance](https://binance.com/) and 
 [CoinMarketCap](https://coinmarketcap.com/currencies) and youtube channels has helped me with that and watch out with the scammers.
+
  ## 7 - Iterate and get stronger.
 With every step you get better and better in the next iteration you can build a more robust environment setup with an advanced hardhat setup for example.
 

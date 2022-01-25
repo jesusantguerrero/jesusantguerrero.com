@@ -3,14 +3,18 @@ import Page from "../../layouts/Page.astro";
 import Project from '../../components/Project.astro';
 import { projects, IProjectSection } from "../../utils/curriculum.ts";
 
-const { ecosystem } = Astro.request.params;
-const filteredProjects = Object.entries(projects).filter(([key]) => key.includes(ecosystem)).map(([_key, value]: [string, IProjectSection]) => ({
+const { params, canonicalURL, url } = Astro.request;
+const filteredProjects = Object.entries(projects)
+.filter(([key]: [string, IProjectSection]) => {
+  return  key === params.ecosystem;
+})
+.map(([_key, value]: [string, IProjectSection]) => ({
   ...value,
 }));
 
 export async function getStaticPaths() {
-    const ecosystem = ['laravel', 'vue', 'web3'];
-    return ecosystem.map( tech => ({params: { tech }}));
+    const ecosystems = ['laravel', 'vue', 'web3'];
+    return ecosystems.map( ecosystem => ({ params: { ecosystem }}));
 }
 ---
 
