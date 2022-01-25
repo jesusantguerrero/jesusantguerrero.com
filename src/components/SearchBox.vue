@@ -40,7 +40,6 @@ export default {
         });
 
         onMounted(() => {
-            console.log("Mounted again")
             timer.value = setInterval(write, props.speed);
         })
 
