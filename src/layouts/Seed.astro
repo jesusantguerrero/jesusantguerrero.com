@@ -1,13 +1,13 @@
 ---
 import Header from "../components/Header.vue"
 import SmartSeedPreview from "../components/SmartSeedPreview.vue"
-import Webmentions from "../components/Webmentions.astro"
-const { content } = Astro.props;
+import { GardenSeed } from "../types";
 
-const postURL = "https://jesusantguerrero.netlify.app" + Astro.request.canonicalURL.pathname
-const WebmentionEndpoint = "https://webmention.io/api/mentions.jf2?"
-const webMentions = await fetch(`${WebmentionEndpoint}target=${postURL}`).then(res => res.json());
-console.log(webMentions);
+const { content } = Astro.props;
+let GardenSeeds = Astro.fetchContent<GardenSeed>('../pages/garden/seeds/*.md');
+const seeds = GardenSeeds.filter(seed => {
+    return seed.content.source.toLowerCase().includes(content.title.toLowerCase())
+});
 ---
 <html lang="en">
 <head>
@@ -16,22 +16,30 @@ console.log(webMentions);
     <title>{content.title}</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href={Astro.resolve("../styles/global.css")}>
-    <link rel="pingback" href={`https://webmention.io/webmention?forward=${postURL}/webmention`} />
-    <Webmentions />
 </head>
 <body>
-    <main class="mb-20">
+    <main>
         <Header client:visible show-logo={true} />
-        <article class="prose pt-20 mx-auto overflow-visible">
+        <article class="py-20 mx-auto overflow-visible prose">
             <h1 class="mb-1 text-xl font-bold text-gray-400"> {content.title }</h1>
             <div class="flex mb-5 space-x-5 text-sm text-gray-500">
-                <div>Status: <span class="text-green-500 font-bold"><i class="fa fa-seedling"/>{content.status}</span> </div>
-                <div>PlantDate: <span class="text-accent-400 font-bold">{content.planted}</span></div>
-                <div>Last Update: <span class="text-accent-400 font-bold">{content.checked || content.planted }</span></div>
+                <div>Status: <span class="font-bold text-green-500"><i class="fa fa-seedling"/>{content.status}</span> </div>
+                <div>PlantDate: <span class="font-bold text-accent-400">{content.planted}</span></div>
+                <div>Last Update: <span class="font-bold text-accent-400">{content.checked || content.planted }</span></div>
             </div>
             <section class="text-gray-500 seed-article">
                 <slot />
                 <SmartSeedPreview client:load />
+                { seeds.length && <div class="mt-5">
+                    <h2 class="mb-1 text-xl font-bold text-gray-400">Backlinks</h2>
+                    <ul class="list-disc list-inside">
+                        {seeds.map(seed => {
+                            return <li class="mb-2">
+                                <a href={`/garden/seeds/${seed.slug}`} class="text-accent-400">{seed.title}</a>
+                            </li>
+                        })}
+                    </ul>
+                }
             </section>
         </article>
     </main>
