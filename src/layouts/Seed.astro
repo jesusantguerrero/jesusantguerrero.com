@@ -4,10 +4,10 @@ import SmartSeedPreview from "../components/SmartSeedPreview.vue"
 import { GardenSeed } from "../types";
 
 const { content } = Astro.props;
-let GardenSeeds = Astro.fetchContent<GardenSeed>('../pages/garden/seeds/*.md');
-const seeds = GardenSeeds.filter(seed => {
-    return seed.content.source.toLowerCase().includes(content.title.toLowerCase())
-});
+// let GardenSeeds = Astro.fetchContent<GardenSeed>('../pages/garden/seeds/*.md');
+// const seeds = GardenSeeds.filter(seed => {
+//     return seed.content.source.toLowerCase().includes(content.title.toLowerCase())
+// });
 ---
 <html lang="en">
 <head>
@@ -30,7 +30,7 @@ const seeds = GardenSeeds.filter(seed => {
             <section class="text-gray-500 seed-article">
                 <slot />
                 <SmartSeedPreview client:load />
-                { seeds.length && <div class="mt-5">
+                <!-- { seeds.length && <div class="mt-5">
                     <h2 class="mb-1 text-xl font-bold text-gray-400">Backlinks</h2>
                     <ul class="list-disc list-inside">
                         {seeds.map(seed => {
@@ -39,7 +39,7 @@ const seeds = GardenSeeds.filter(seed => {
                             </li>
                         })}
                     </ul>
-                }
+                } -->
             </section>
         </article>
     </main>
