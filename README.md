@@ -5,6 +5,12 @@ In the first edition of my website [jesusantguerrero.github.io](https://jesusant
 
 All that with a minimalistic design ond the plan is to always keep this as a work in progress.
 
+### Inspiration
+- [Travis Neilson](http://travisneilson.com/) the devtips sensei
+- [Antfu](https://antfu.me/)
+- [Maggie Appleton](https://maggieappleton.com/)
+- [Adam Wathan](https://adamwathan.me/)
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
@@ -15,6 +21,3 @@ All commands are run from the root of the project, from a terminal:
 | `npm run dev`   | Starts local dev server at `localhost:3000` |
 | `npm run build` | Build your production site to `./dist/`     |
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://github.com/snowpackjs/astro) or jump into our [Discord server](https://astro.build/chat).
