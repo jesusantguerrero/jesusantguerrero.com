@@ -1,29 +1,9 @@
-# Welcome to [Astro](https://astro.build)
+# Jesusantguerrero dot com 
+> Powered by [Astro](https://astro.build)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+In the first edition of my website [jesusantguerrero.github.io](https://jesusantguerrero.github.io) I did a live portfolio showing projects But this time I wanted a way of digital Home where I put my thoughts about the things I like (programming, vue, philosophy, music, writing) as well as a Digital Garden and any thing I have that is worth sharing.
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-/
-├── public/
-│   ├── robots.txt
-│   └── favicon.ico
-├── src/
-│   ├── components/
-│   │   └── Tour.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
+All that with a minimalistic design ond the plan is to always keep this as a work in progress.
 
 ## 🧞 Commands
 
