@@ -61,6 +61,12 @@ export const more = [
     description: 'Favorite songs I use to code, travel and to clean my house',
     link: 'my-play-list',
   },
+  {
+    title: 'Bookmarks',
+    technologies: [],
+    description: 'Favorite songs I use to code, travel and to clean my house',
+    link: 'my-play-list',
+  },
 ]
 
 interface IProject {

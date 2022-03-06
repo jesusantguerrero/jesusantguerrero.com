@@ -4,10 +4,9 @@ import SmartSeedPreview from "../components/SmartSeedPreview.vue"
 import { GardenSeed } from "../types";
 
 const { content } = Astro.props;
-// let GardenSeeds = Astro.fetchContent<GardenSeed>('../pages/garden/seeds/*.md');
-// const seeds = GardenSeeds.filter(seed => {
-//     return seed.content.source.toLowerCase().includes(content.title.toLowerCase())
-// });
+const pageTitle = `${content.title} - Jesus Guerrero`
+const pageDescription = `${content.description}`
+
 ---
 <html lang="en">
 <head>
@@ -16,6 +15,23 @@ const { content } = Astro.props;
     <title>{content.title}</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href={Astro.resolve("../styles/global.css")}>
+    
+    <meta name="title" content={pageTitle}>
+    <meta name="description" content={pageDescription}>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jesusantguerrero.com/">
+    <meta property="og:title" content={pageTitle}>
+    <meta property="og:description" content={pageDescription}>
+    <meta property="og:image" content="">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://jesusantguerrero.com/">
+    <meta property="twitter:title" content={pageTitle}>
+    <meta property="twitter:description" content={pageDescription}>
+    <meta property="twitter:image" content="">
 </head>
 <body>
     <main>
