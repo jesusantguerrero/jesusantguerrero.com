@@ -60,7 +60,7 @@ seeds = seeds.filter(seed => {
             <section class="text-gray-500 seed-article">
                 <slot />
                 <SmartSeedPreview client:load />
-                { seeds.length && <div class="mt-5">
+                { !seeds.length ? null : <div class="mt-5">
                     <h2 class="mb-1 text-xl font-bold text-gray-400">Backlinks</h2>
                     <ul class="list-disc list-inside">
                         {seeds.map(seed => {
