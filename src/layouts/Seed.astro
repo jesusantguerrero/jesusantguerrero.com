@@ -7,6 +7,20 @@ const { content } = Astro.props;
 const pageTitle = `${content.title} - Jesus Guerrero`
 const pageDescription = `${content.description}`
 
+const allSeeds = await import.meta.glob('../pages/garden/seeds/*.md')
+let seeds = await Promise.all(
+    Object.entries(allSeeds).map(([key, seed]) => {
+        const url = key.replace('../pages/garden/seeds/', '/garden/seeds').replace('.md', '/')
+        return seed().then(content => ({
+            ...content.frontmatter,
+            url
+        }))
+    })
+)
+
+seeds = seeds.filter(seed => {
+    return seed.astro.source.toLowerCase().includes(content.title.toLowerCase())
+});
 ---
 <html lang="en">
 <head>
@@ -46,7 +60,7 @@ const pageDescription = `${content.description}`
             <section class="text-gray-500 seed-article">
                 <slot />
                 <SmartSeedPreview client:load />
-                <!-- { seeds.length && <div class="mt-5">
+                { seeds.length && <div class="mt-5">
                     <h2 class="mb-1 text-xl font-bold text-gray-400">Backlinks</h2>
                     <ul class="list-disc list-inside">
                         {seeds.map(seed => {
@@ -55,7 +69,7 @@ const pageDescription = `${content.description}`
                             </li>
                         })}
                     </ul>
-                } -->
+                }
             </section>
         </article>
     </main>
