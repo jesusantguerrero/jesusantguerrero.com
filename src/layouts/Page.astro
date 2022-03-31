@@ -34,7 +34,9 @@ const { title, showLogo } = Astro.props;
 <body>
     <main class="pb-20">
         <Header client:load show-logo={showLogo}></Header>
-        <slot />
+        <div class="px-5 md:px-0">
+            <slot />
+        </div>
     </main>
     <Footer client:visible />
 </body>
