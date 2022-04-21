@@ -3,8 +3,8 @@ import Page from "../../../layouts/Page.astro";
 import GardenSeedPreview, { GardenSeed } from "../../../components/GardenSeedPreview.astro";
 
 let title = "Garden";
-const { tag } = Astro.request.params;
-let GardenSeeds = Astro.fetchContent<GardenSeed>('../seeds/*.md');
+const { tag } = Astro.params;
+let GardenSeeds = await Astro.glob<GardenSeed>('../seeds/*.md');
 GardenSeeds = GardenSeeds.filter(seed => seed.tags.includes(tag))
 export async function getStaticPaths() {
     const tags = ['Historia Dominicana', 'Programming', 'Productivity', 'Religion', 'Thoughts', 'Theology' ,'Web Development', 'Blockchain', 'Solidity', 'Web3'];
