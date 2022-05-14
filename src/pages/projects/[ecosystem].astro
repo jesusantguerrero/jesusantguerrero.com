@@ -3,7 +3,7 @@ import Page from "../../layouts/Page.astro";
 import Project from '../../components/Project.astro';
 import { projects, IProjectSection } from "../../utils/curriculum.ts";
 
-const { params, canonicalURL, url } = Astro.request;
+const params = Astro.params;
 const filteredProjects = Object.entries(projects)
 .filter(([key]: [string, IProjectSection]) => {
   return  key === params.ecosystem;

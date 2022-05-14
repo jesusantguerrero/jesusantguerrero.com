@@ -4,7 +4,8 @@ import Page from "../../layouts/Page.astro";
 import GardenSeedPreview, { GardenSeed } from "../../components/GardenSeedPreview.astro";
 
 let title = "Garden";
-let GardenSeeds = Astro.fetchContent<GardenSeed>('./seeds/*.md');
+let GardenSeeds = await Astro.glob<GardenSeed>('./seeds/*.md');
+console.log(GardenSeeds);
 ---
 <Page title={title} showLogo={true}>
     <article class="prose max-w-4xl pt-20 mx-auto overflow-visible text-left text-gray-700">

@@ -2,6 +2,7 @@
 import Header from "../components/Header.vue"
 import SmartSeedPreview from "../components/SmartSeedPreview.vue"
 import { GardenSeed } from "../types";
+import "./../styles/global.css";
 
 const { content } = Astro.props;
 const pageTitle = `${content.title} - Jesus Guerrero`
@@ -12,6 +13,7 @@ let seeds = await Promise.all(
     Object.entries(allSeeds).map(([key, seed]) => {
         const url = key.replace('../pages/garden/seeds/', '/garden/seeds').replace('.md', '/')
         return seed().then(content => ({
+            ...content,
             ...content.frontmatter,
             url
         }))
@@ -19,7 +21,7 @@ let seeds = await Promise.all(
 )
 
 seeds = seeds.filter(seed => {
-    return seed.astro.source.toLowerCase().includes(content.title.toLowerCase())
+    return seed.astro?.source.toLowerCase().includes(content.title.toLowerCase())
 });
 ---
 <html lang="en">
@@ -28,7 +30,6 @@ seeds = seeds.filter(seed => {
     <meta name="viewport" content="width=device-width">
     <title>{content.title}</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href={Astro.resolve("../styles/global.css")}>
     
     <meta name="title" content={pageTitle}>
     <meta name="description" content={pageDescription}>
