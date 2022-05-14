@@ -21,7 +21,7 @@ let seeds = await Promise.all(
 )
 
 seeds = seeds.filter(seed => {
-    return seed.astro.source.toLowerCase().includes(content.title.toLowerCase())
+    return seed.astro?.source.toLowerCase().includes(content.title.toLowerCase())
 });
 ---
 <html lang="en">
@@ -52,7 +52,7 @@ seeds = seeds.filter(seed => {
     <main>
         <Header client:visible show-logo={true} />
         <article class="px-5 md:px-0 py-20 mx-auto overflow-visible prose">
-            <h1 class="mb-1 text-xl font-bold text-gray-400"> {content.frontmatter.title }</h1>
+            <h1 class="mb-1 text-xl font-bold text-gray-400"> {content.title }</h1>
             <div class="md:flex mb-5 md:space-x-5 text-sm text-gray-500">
                 <div>Status: <span class="font-bold text-green-500"><i class="fa fa-seedling"/>{content.status}</span> </div>
                 <div>PlantDate: <span class="font-bold text-accent-400">{content.planted}</span></div>

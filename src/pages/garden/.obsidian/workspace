@@ -9,8 +9,9 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "seeds/deploying-full-stack-apps.md",
-            "mode": "source"
+            "file": "seeds/js-under-the-hood.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -74,7 +75,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "seeds/deploying-full-stack-apps.md",
+                "file": "seeds/js-under-the-hood.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,6 +95,7 @@
   },
   "active": "a44e33d3baf83bb2",
   "lastOpenFiles": [
+    "seeds/js-under-the-hood.md",
     "seeds/deploying-full-stack-apps.md",
     "seeds/dia-de-independencia-2021.md",
     "seeds/sobre-mir.md",
@@ -102,7 +104,6 @@
     "seeds/pillars-of-web3.md",
     "seeds/error-fundacion-dominicana.md",
     "seeds/thoughts-on-web-3.md",
-    "seeds/the-perfect-productivity-system-should-have-short-steps.md",
-    "seeds/the-perfect-productivity-system-should-have-no-more-than-3-views.md"
+    "seeds/the-perfect-productivity-system-should-have-short-steps.md"
   ]
 }
