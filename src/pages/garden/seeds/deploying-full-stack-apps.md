@@ -10,15 +10,15 @@ status: seedling
 layout: '../../../layouts/Seed.astro'
 ---
 
-In today's development world is easier than ever to deploy your proyects online with minimal configuration, with frontend and JAM or node powered apps there are a lot of good options: Vercel, Netlify, Gihub Pages, Gitlab Pages but for modern php/laravel powered apps there's no too many. out of [Heroku]() I dont find a good one with modern characteristics as we have in frontend.
+In today's development world is easier than ever to deploy your projects online with minimal configuration, with frontend and JAM or node powered apps there are a lot of good options: Vercel, Netlify, Gihub Pages, Gitlab Pages but for modern php/laravel powered apps there's no too many. out of [Heroku]() I don't find a good one with modern characteristics as we have in frontend.
 
 #### The needs
 I am talking about a production ready app so what are our checklist
 
-- Separated `landing page` from the app. we dont want app errors affecting our marketing / guides pages neither slowing them down and want to implement SEO that probably our app itself doesnt need, because the routes are guarded.
+- Separated `landing page` from the app. we don't want app errors affecting our marketing / guides pages neither slowing them down and want to implement SEO that probably our app itself doesn't need, because the routes are guarded.
 - The `Main app` with Laravel/Jetstream and all resources we need for it (Database, cron tabs, redis )
 - A `Database Manager` to quick review the database if we are far for our computer and we need to manage the data online
-- Ownership, we dont need to pay extra money just to have a basic functionality we would like (now everyting is a plugin, DB, Crons, etc... bro, I can install it)
+- Ownership, we don't need to pay extra money just to have a basic functionality we would like (now everything is a plugin, DB, Crons, etc... bro, I can install it)
 - For a massive app with > 100 paying customers maybe is a good options to migrate to something like   [the laravel services]() but for now maybe we just need to deploy and get some users and see how it goes with lees spent as posible.
 
 #### The solution
@@ -28,7 +28,6 @@ Well the solution require some steps that are not so straight forward as I would
 - Cloud provider: Digital Ocean
 - Apps: Docker, Docker Compose
 - Tools: [ssl-companion](jrcs/letsencrypt-nginx-proxy-companion), jwilder/nginx-proxy
-
 
 #### steps
 - start a doplet with Digital Ocean (you have to give access to your ssh key when creating)
@@ -40,3 +39,15 @@ Well the solution require some steps that are not so straight forward as I would
 Maybe there's a shorter way to doit but not at USD 5.00 / Month without the cold starts
 
 Anyways I am still testing out to see how it goes.
+
+
+Update 2022-06-27:
+
+> Docker Compose with php and laravel wasn't a good option in a production environment out of the box the app was slow I ended up installing the LEMP stack and do the deployment manually. 
+Updated stack:
+
+- IaaS: Digital Ocean Doplet
+- Apps: NGINX, MariaDB, PHP 8.1
+- Tools: cerbot
+
+I optimized laravel for production but I have to try SSR inertia and/or octane to see how it goes.

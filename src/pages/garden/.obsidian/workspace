@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "seeds/js-under-the-hood.md",
+            "file": "seeds/atomic-design-in-vue.md",
             "mode": "source",
             "source": false
           }
@@ -25,6 +25,7 @@
       {
         "id": "a2106d39e4258611",
         "type": "tabs",
+        "dimension": 70.41420118343196,
         "children": [
           {
             "id": "a0bc51d51f4d157d",
@@ -39,6 +40,7 @@
       {
         "id": "3314d14dfb7201fa",
         "type": "tabs",
+        "dimension": 29.585798816568047,
         "children": [
           {
             "id": "e4c9855a876f33c3",
@@ -75,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "seeds/js-under-the-hood.md",
+                "file": "seeds/atomic-design-in-vue.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,15 +97,15 @@
   },
   "active": "a44e33d3baf83bb2",
   "lastOpenFiles": [
-    "seeds/js-under-the-hood.md",
-    "seeds/deploying-full-stack-apps.md",
+    "seeds/atomic-design-in-vue.md",
     "seeds/dia-de-independencia-2021.md",
+    "seeds/deploying-full-stack-apps.md",
+    "seeds/js-under-the-hood.md",
+    "seeds/error-fundacion-dominicana.md",
     "seeds/sobre-mir.md",
     "seeds/my-roadmap-on-web3.md",
     "seeds/no-ha-habido-un-presidente-bueno-en-rd.md",
     "seeds/pillars-of-web3.md",
-    "seeds/error-fundacion-dominicana.md",
-    "seeds/thoughts-on-web-3.md",
-    "seeds/the-perfect-productivity-system-should-have-short-steps.md"
+    "seeds/thoughts-on-web-3.md"
   ]
 }
