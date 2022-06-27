@@ -10,14 +10,14 @@ status: seedling
 layout: '../../../layouts/Seed.astro'
 ---
 
-In today's development world is easier than ever to deploy your projects online with minimal configuration, with frontend and JAM or node powered apps there are a lot of good options: Vercel, Netlify, Gihub Pages, Gitlab Pages but for modern php/laravel powered apps there's no too many. out of [Heroku]() I don't find a good one with modern characteristics as we have in frontend.
+In today's development world is easier than ever to deploy your projects online with minimal configuration, with frontend and JAM Stack/node powered apps there are a lot of good options: Vercel, Netlify, Gihub Pages, Gitlab Pages but for modern php/laravel powered apps there's no too many. out of [Heroku](https://www.heroku.com/) and  I don't find a good one with modern characteristics as we have in frontend.
 
 #### The needs
 I am talking about a production ready app so what are our checklist
 
 - Separated `landing page` from the app. we don't want app errors affecting our marketing / guides pages neither slowing them down and want to implement SEO that probably our app itself doesn't need, because the routes are guarded.
 - The `Main app` with Laravel/Jetstream and all resources we need for it (Database, cron tabs, redis )
-- A `Database Manager` to quick review the database if we are far for our computer and we need to manage the data online
+- A `Database Manager` to quick review the database if we are far from our computer and we need to manage the data online
 - Ownership, we don't need to pay extra money just to have a basic functionality we would like (now everything is a plugin, DB, Crons, etc... bro, I can install it)
 - For a massive app with > 100 paying customers maybe is a good options to migrate to something like   [the laravel services]() but for now maybe we just need to deploy and get some users and see how it goes with lees spent as posible.
 
