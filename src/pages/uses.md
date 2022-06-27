@@ -12,6 +12,7 @@ updated: '2022-06-27'
 
 # Uses
 
+
 ## Development Tools
 - [Laragon](https://laragon.org/docs/) for my Laravel Apps (Comes with Cmder, HeidiSQL, MySql, Nginx )
 - [Git](https://git-scm.com/)
@@ -36,10 +37,14 @@ updated: '2022-06-27'
 
 
 ## Stacks && Deployment
-- [Vercel]() & [Netlify]() - Host my SPA's or JAM Stack Apps
-- [Digital Ocean]() - Hosting and deploying my Laravel apps via Doplets
+- [Vue](https://vuejs.org/)
+- [React](https://beta.reactjs.org/)
+- [Laravel](https://laravel.com/)
+- [Inertia.js](https://inertiajs.com/)
+- [MySql](https://www.mysql.com/)
+- [NVM](https://github.com/coreybutler/nvm-windows) && [Node](https://nodejs.org/en/) 
+- [TailwindCSS](https://tailwindcss.com/)
 - [Firebase](https://firebase.google.com/) - Apps with low backend code requirements like [Zen](https://zenboard.app/)
 - [Supabase](https://supabase.com/) - Apps with low backend code requirements with SQL database 
-
-## Personal & Family
-- [YNAB](https://app.youneedabudget.com/) - Manage my Budget
+- [Vercel](https://vercel.com) & [Netlify](https://www.netlify.com/) - Host my SPA's or JAM Stack Apps
+- [Digital Ocean]() - Hosting and deploying my Laravel apps via Doplets
