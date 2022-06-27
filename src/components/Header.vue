@@ -35,6 +35,10 @@ export default {
                 label: "Digital Garden",
                 path: "/garden"
             },
+            uses: {
+                label: "Uses",
+                path: "/uses"
+            },
             projects: {
                 label: "Projects",
                 path:"/#projects"
