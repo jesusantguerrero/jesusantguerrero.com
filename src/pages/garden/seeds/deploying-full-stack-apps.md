@@ -43,7 +43,7 @@ Anyways I am still testing out to see how it goes.
 
 Update 2022-06-27:
 
-> Docker Compose with php and laravel wasn't a good option in a production environment out of the box the app was slow I ended up installing the LEMP stack and do the deployment manually. 
+ Docker Compose with php and laravel wasn't a good option in a production environment out of the box the app was slow I ended up installing the [LEMP stack](https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-20-04) and do the deployment manually. 
 Updated stack:
 
 - IaaS: Digital Ocean Doplet

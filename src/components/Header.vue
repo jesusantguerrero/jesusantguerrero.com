@@ -1,6 +1,6 @@
 <template>
-<div class="fixed z-30 w-full px-10 py-3 text-gray-400 transition" :class="[ scrolled ? 'shadow-md bg-primary-500 text-white': 'bg-white']">
-    <div class="flex items-center justify-between wrapper">
+<div class="fixed z-30 w-full pt-3 text-gray-400 transition backdrop-blur-sm" :class="'bg-white/80'">
+    <div class="flex items-center px-10 justify-between wrapper">
         <h1 class="text-2xl font-bold">
             <a href="/" v-if="scrolled || showLogo">
                 JG
@@ -8,13 +8,14 @@
         </h1>
         <nav class="flex space-x-2.5 font-medium list-none">
             <li class="transition cursor-pointer"
-            :class="[scrolled ? 'text-gray-200 hover:text-white': 'hover:text-dodgerblue-400']" v-for="link in links">
+            :class="['hover:text-dodgerblue-400']" v-for="link in links">
                 <a :href="link.path">
                     {{ link.label }}
                 </a>
             </li>
         </nav>
     </div>
+    <div class="h-0.5 mt-5 w-full transition-all backdrop-blur-sm" :class="(scrolled || showLogo) && 'bg-gradient-to-r from-accent-600/80 to-primary-300/80'"></div>
 </div>
 </template>
 
