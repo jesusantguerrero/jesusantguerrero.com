@@ -1,3 +1,19 @@
+interface IProject {
+  title: string
+  technologies: string[]
+  description: string
+  image: string
+  link: string
+  pinned?: boolean
+  type: 'fullstack' | 'package' | 'frontend' | 'backend' | 'template'
+}
+
+export interface IProjectSection {
+  title: string
+  list: IProject[]
+}
+
+
 export const about = {
   description: '',
   image: '',
@@ -13,11 +29,29 @@ export const skills = {
   ],
 }
 
-export const portfolio = [
+export const portfolio: IProject[] = [
+  {
+    title: 'Loger',
+    technologies: ['PHP', 'Laravel', 'MySql', 'Vue'],
+    description: 'The Digital Home Management software',
+    image: 'https://github.com/jesusantguerrero/atmosphere/blob/master/public/images/full-sized-dashboard.png',
+    link: 'https://github.com/jesusantguerrero/atmosphere',
+    type: 'fullstack',
+    pinned: true
+  },
+  {
+    title: 'Atmosphere-ui',
+    technologies: ['Vue', 'vitest', 'storybook', 'TailwindCSS'],
+    description: "A set of components for my laravel's jetstream-inertia projects",
+    image: '',
+    link: 'https://github.com/jesusantguerrero/atmosphere-ui',
+    type: 'package',
+    pinned: true
+  },
   {
     title: 'Zen.',
     technologies: ['HTML', 'CSS / SCSS', 'TailwindCSS', 'Javascript', 'Vue', 'Firebase Auth', 'Firestore', 'Firebase Functions', 'Express.js'],
-    description: 'Zen is a productivity app that integrates Eisenhower Matrix, Promodoros, and part of the Get Things Done (GTD) principles in a unique way, to improve your developer routine. The purpose of Zen is to help you stay in the zone.',
+    description: 'Zen is a productivity app that integrates Eisenhower Matrix with The Pomodoro Technique.',
     image: 'https://zenboard.app/zenboard.png',
     link: 'https://zenboard.app/',
     type: 'fullstack',
@@ -25,20 +59,20 @@ export const portfolio = [
   {
     title: 'Sunday',
     technologies: ['HTML', 'CSS / SCSS', 'TailwindCSS', 'Javascript', 'Vue', 'PHP', 'Laravel', 'MySql', 'Docker'],
-    description: 'Monolith app using laravel 8, jetstream, intertia and vue. ICDaily is a productivity web app to help you keep your tasks, track your time, using pomodoro inspired on Monday.',
+    description: 'IC Daily is a multi purpose productivity inspired on Monday.',
     image: './assets/img/home.png',
     link: 'https://github.com/jesusantguerrero/sunday',
-    type: 'most proud',
+    pinned: true,
+    type: 'fullstack'
   },
-
   {
     title: 'IC Note',
     technologies: ['HTML', 'CSS', 'javascript', 'electron', 'node.js'],
     description: 'Desktop Markdown note-taker using Electron',
     image: './assets/img/img7.png',
     link: 'https://github.com/jesusantguerrero/icnote',
-    type: 'most proud',
-  },
+    type: 'package',
+  }, 
 ]
 
 export const more = [
@@ -59,28 +93,16 @@ export const more = [
     title: 'My Playlist',
     technologies: [],
     description: 'Favorite songs I use to code, travel and to clean my house',
-    link: 'my-play-list',
+    link: '/play-list',
   },
   {
     title: 'Bookmarks',
     technologies: [],
-    description: 'Favorite songs I use to code, travel and to clean my house',
-    link: 'my-play-list',
+    description: 'Notes & Dev Bookmarks',
+    link: '/notes',
   },
 ]
 
-interface IProject {
-  title: string
-  technologies: string[]
-  description: string
-  image: string
-  link: string
-  type: 'fullstack' | 'package' | 'frontend' | 'backend' | 'template'
-}
-export interface IProjectSection {
-  title: string
-  list: IProject[]
-}
 
 export const projects: Record<string, IProjectSection > = {
   laravel: {
@@ -184,7 +206,6 @@ export const projects: Record<string, IProjectSection > = {
     ]
   },
 }
-
 
 export default {
   about,
