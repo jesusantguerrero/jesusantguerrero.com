@@ -8,7 +8,7 @@
         </h1>
         <nav class="flex space-x-2.5 font-medium list-none">
             <li class="transition cursor-pointer"
-            :class="['hover:text-dodgerblue-400']" v-for="link in links">
+            :class="['hover:text-dodgerblue-400']" v-for="link in links" :key="link.label">
                 <a :href="link.path">
                     {{ link.label }}
                 </a>
@@ -42,7 +42,7 @@ export default {
             },
             projects: {
                 label: "Projects",
-                path:"/#projects"
+                path:"/projects"
             },
             blog: {
                 label: "Blog",

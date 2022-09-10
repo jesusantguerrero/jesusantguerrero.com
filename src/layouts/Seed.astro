@@ -1,7 +1,7 @@
 ---
+import { MarkdownContent, MDXInstance, Page } from "astro";
 import Header from "../components/Header.vue"
 import SmartSeedPreview from "../components/SmartSeedPreview.vue"
-import { GardenSeed } from "../types";
 import "./../styles/global.css";
 
 const { content } = Astro.props;
@@ -12,11 +12,13 @@ const allSeeds = await import.meta.glob('../pages/garden/seeds/*.md')
 let seeds = await Promise.all(
     Object.entries(allSeeds).map(([key, seed]) => {
         const url = key.replace('../pages/garden/seeds/', '/garden/seeds').replace('.md', '/')
-        return seed().then(content => ({
-            ...content,
-            ...content.frontmatter,
-            url
-        }))
+        return seed().then((content: MarkdownContent) => {
+            return {
+                ...content,
+                ...content.frontmatter,
+                url
+            }
+        })
     })
 )
 
@@ -70,6 +72,7 @@ seeds = seeds.filter(seed => {
                             </li>
                         })}
                     </ul>
+                </div>
                 }
             </section>
         </article>

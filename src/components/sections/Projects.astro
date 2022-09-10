@@ -1,5 +1,5 @@
 ---
-import { portfolio } from "../../utils/curriculum.ts";
+import { portfolio } from "../../_data";
 import Project from "../Project.astro";
 import SearchBox from "../SearchBox.vue";
 import BlockSection from "./BlockSection.astro";
@@ -12,8 +12,11 @@ import BlockSection from "./BlockSection.astro";
     <SearchBox text="Some of my projects" client:visible />
     
     <div class="mt-10 space-y-5">
-        { portfolio.map(project => (
+        { portfolio.slice(0, 4).map(project => (
             <Project project={project} projectType="code" target="_blank" />
         ))}
+         <div class="w-full flex justify-center">
+            <a href="/projects" class="mx-auto transition hover:bg-primary-400 bg-primary-500 shadow-lg shadow-primary-500/50 text-white px-5 rounded-md py-2">All projects</a>
+        </div>
     </div>
 </BlockSection>

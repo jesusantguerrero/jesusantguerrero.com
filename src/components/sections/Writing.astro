@@ -1,9 +1,9 @@
 ---
-import { fetchPostsByUser } from "../../utils/apis.ts";
+import { fetchPostsByUser } from "../../utils/apis";
 import Project from "../Project.astro";
 import BlockSection from "./BlockSection.astro";
 
-const posts = await fetchPostsByUser('jesusantguerrero');
+const posts = await fetchPostsByUser('jesusantguerrero', 4);
 ---
 <BlockSection 
     id="writing"
