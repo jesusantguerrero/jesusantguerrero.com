@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "seeds/deploying-full-stack-apps.md",
+            "file": "seeds/digital-home-management.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "seeds/deploying-full-stack-apps.md",
+                "file": "seeds/digital-home-management.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,15 +97,15 @@
   },
   "active": "a44e33d3baf83bb2",
   "lastOpenFiles": [
+    "seeds/error-fundacion-dominicana.md",
+    "seeds/digital-home-management.md",
+    "seeds/dia-de-independencia-2021.md",
+    "Untitled.md",
+    "seeds/deploying-full-stack-apps.md",
     "seeds/state-management-in-vue.md",
     "seeds/sobre-mir.md",
     "seeds/atomic-design-in-vue.md",
-    "seeds/dia-de-independencia-2021.md",
-    "seeds/deploying-full-stack-apps.md",
     "seeds/js-under-the-hood.md",
-    "seeds/error-fundacion-dominicana.md",
-    "seeds/my-roadmap-on-web3.md",
-    "seeds/no-ha-habido-un-presidente-bueno-en-rd.md",
-    "seeds/pillars-of-web3.md"
+    "seeds/my-roadmap-on-web3.md"
   ]
 }
