@@ -2,6 +2,9 @@
   "name": "jesusantguerrero",
   "version": "0.0.1",
   "private": true,
+  "engine": {
+    "node": "18.17.1"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,18 +13,17 @@
   },
   "devDependencies": {
     "@astrojs/renderer-vue": "^0.4.0",
-    "@astrojs/tailwind": "^3.0.1",
-    "@astrojs/vue": "^2.0.1",
+    "@astrojs/tailwind": "^5.0.0",
+    "@astrojs/vue": "^3.0.0",
     "@tailwindcss/typography": "^0.5.9",
-    "astro": "^2.0.4",
-    "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.21",
-    "sass": "^1.57.1",
-    "tailwindcss": "^3.2.4",
+    "astro": "^3.0.3",
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.29",
+    "sass": "^1.66.1",
+    "tailwindcss": "^3.3.3",
     "tippy.js": "^6.3.7"
   },
   "dependencies": {
-    "@astrojs/markdown-component": "^1.0.2",
     "astro-remark-digital-garden": "^0.2.0"
   }
 }

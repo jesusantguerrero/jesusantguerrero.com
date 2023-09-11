@@ -33,9 +33,13 @@ export const fetchGQL = async (query, variables = {}) => {
 }
 
 const fetchDevtoPosts = async (username) => {
-  const response = await fetch(`${DEVTO_URL}/articles?username=${username}`);
-  const data = await response.json();
-  return data;
+  try {
+    const response = await fetch(`${DEVTO_URL}/articles?username=${username}`);
+    const data = await response.json();
+    return data;
+  } catch (err) {
+    return []
+  }
 }
 
 /**
