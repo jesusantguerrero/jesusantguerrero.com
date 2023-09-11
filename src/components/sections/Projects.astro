@@ -3,20 +3,26 @@ import { portfolio } from "../../_data";
 import Project from "../Project.astro";
 import SearchBox from "../SearchBox.vue";
 import BlockSection from "./BlockSection.astro";
+import { getCollection } from 'astro:content';
+const projectEntries = await getCollection('projects');
 ---
+
 <BlockSection
     id="projects"
     title="Projects"
-    tags={["Some of the stuff I'm most proud about"]}    
+    tags={["Some of the stuff I'm most proud about"]}  
 >  
     <SearchBox text="Some of my projects" client:visible />
     
     <div class="mt-10 space-y-5">
+        {projectEntries.map(projectEntry => (
+             <Project project={projectEntry.data} link={`/projects/${projectEntry.slug}`} projectType="code" />
+        ))}
         { portfolio.slice(0, 4).map(project => (
             <Project project={project} projectType="code" target="_blank" />
         ))}
-         <div class="w-full flex justify-center">
-            <a href="/projects" class="mx-auto transition hover:bg-primary-400 bg-primary-500 shadow-lg shadow-primary-500/50 text-white px-5 rounded-md py-2">All projects</a>
+         <div class="flex justify-center w-full">
+            <a href="/projects" class="px-5 py-2 mx-auto text-white transition rounded-md shadow-lg hover:bg-primary-400 bg-primary-500 shadow-primary-500/50">All projects</a>
         </div>
     </div>
 </BlockSection>

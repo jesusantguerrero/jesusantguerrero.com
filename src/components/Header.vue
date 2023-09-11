@@ -1,5 +1,5 @@
 <template>
-<div class="fixed z-30 w-full pt-3 text-gray-400 transition backdrop-blur-sm" :class="'bg-white/80'">
+<div class="fixed z-30 w-full pt-3 text-gray-100 transition backdrop-blur-sm" :class="'bg-slate-800/80'">
     <div class="flex items-center px-10 justify-between wrapper">
         <h1 class="text-2xl font-bold">
             <a href="/" v-if="scrolled || showLogo">

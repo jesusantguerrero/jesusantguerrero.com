@@ -31,15 +31,6 @@ export const skills = {
 
 export const portfolio: IProject[] = [
   {
-    title: 'Loger',
-    technologies: ['PHP', 'Laravel', 'MySql', 'Vue'],
-    description: 'The Digital Home Management software',
-    image: 'https://github.com/jesusantguerrero/atmosphere/blob/master/public/images/full-sized-dashboard.png',
-    link: 'https://github.com/jesusantguerrero/atmosphere',
-    type: 'fullstack',
-    pinned: true
-  },
-  {
     title: 'Atmosphere-ui',
     technologies: ['Vue', 'vitest', 'storybook', 'TailwindCSS'],
     description: "A set of components for my laravel's jetstream-inertia projects",
@@ -65,14 +56,6 @@ export const portfolio: IProject[] = [
     pinned: true,
     type: 'fullstack'
   },
-  {
-    title: 'IC Note',
-    technologies: ['HTML', 'CSS', 'javascript', 'electron', 'node.js'],
-    description: 'Desktop Markdown note-taker using Electron',
-    image: './assets/img/img7.png',
-    link: 'https://github.com/jesusantguerrero/icnote',
-    type: 'package',
-  }, 
 ]
 
 export const more = [

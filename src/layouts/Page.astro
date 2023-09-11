@@ -2,6 +2,7 @@
 import Header from "../components/Header.vue"
 import Footer from "../components/Footer.vue"
 import Webmentions from "../components/Webmentions.astro"
+import { ViewTransitions } from 'astro:transitions';
 import "../styles/global.css"
 
 const { title, showLogo } = Astro.props;
@@ -30,8 +31,9 @@ const { title, showLogo } = Astro.props;
     <meta property="twitter:title" content="Jesus Guerrero">
     <meta property="twitter:description" content="I’m a system engineer and full-stack developer from the Dominican Republic who is passionate about programming in general, web development and Vue.js.">
     <meta property="twitter:image" content="">
+    <ViewTransitions />
 </head>
-<body>
+<body class="bg-slate-800">
     <main class="pb-20">
         <Header client:load show-logo={showLogo}></Header>
         <div class="px-5 md:px-0">

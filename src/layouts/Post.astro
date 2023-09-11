@@ -11,27 +11,27 @@ const { content } = Astro.props;
     <title>{content.title}</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 </head>
-<body>
+<body class="bg-slate-800 text-gray-200">
     <main class="pb-20 px-5 md:px-0">
         <Header client:visible show-logo={true} />
         <article class="max-w-5xl pt-20 mx-auto overflow-visible">
-            <h1 class="mb-1 text-xl font-bold text-gray-400"> {content.title }</h1>
-            <div class="flex mb-5 space-x-5 text-sm text-gray-500">
+            <h1 class="mb-1 text-xl font-bold text-gray-200"> {content.title }</h1>
+            <div class="flex mb-5 space-x-5 text-sm ">
                 <div>Publish Date: <span class="font-bold text-accent-400">{content.published}</span></div>
                 <div>Last Update: <span class="font-bold text-accent-400">{content.updated || content.planted }</span></div>
             </div>
-            <section class="prose text-gray-500 seed-article">
+            <section class="prose text-gray-200 seed-article prose-cyan prose-headings:text-accent-400">
                 <slot />
             </section>
         </article>
     </main>
-    <footer class="w-full py-5 text-gray-400 border-t">
+    <footer class="w-full py-5 text-gray-200 border-t">
         <div class="mx-auto text-xs max-w-7xl">2021 Made with <span class="font-bold text-accent-400">code</span> by <span class="font-bold underline">Jesus Guerrero</span></div>
     </footer>
 </body>
 </html>
 
-<style lang="scss" global>
+<style lang="scss" is:global>
 .seed-article a, .seed-article .prose a {
     &[href*="/garden/seeds/"] {
         @apply text-dodgerblue-400 font-bold border-dashed border-b no-underline border-dodgerblue-400;

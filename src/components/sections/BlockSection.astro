@@ -7,7 +7,7 @@ interface Props {
 }
 const { title, tags, id} = Astro.props;
 ---
-<article class="px-4 project-section" id={id}>
+<article class="px-4 project-section pt-32" id={id}>
     <section class="flex flex-col section-card md:flex-row">
         <div class="w-4/12 section-card_left">
             <SectionTag
@@ -23,7 +23,6 @@ const { title, tags, id} = Astro.props;
 
 <style lang="scss">
     article {
-        @apply bg-white;
         color: var(--text-color);
         display: flex;
         align-items: center;

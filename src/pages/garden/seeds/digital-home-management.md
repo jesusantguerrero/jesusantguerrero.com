@@ -16,7 +16,6 @@ Managing a home and family is almost like being a CEO of a company. There's a lo
 
 The benefits of it [maintain sanity and reliability](), [accesibility]()
 
-
 ### What areas/aspects of our home/family life could be digitalized?
 
 The most important aspects are:
