@@ -1,13 +1,11 @@
 ---
 title: 'The perfect productivity system should have short steps'
-slug: "the-perfect-productivity-system-should-have-short-steps"
 description: ''
 planted: '2021-10-16'
 author: 'Jesus Guerrero'
 tags: ['Productivity']
 language: 'english'
 status: seedling
-layout: '../../../layouts/Seed.astro'
 ---
 
 Planning, acting, measure, and review are the most common steps you will find in many techniques and applications With different names but in essence this are the main four. Anything above that would turn into an overhead and the more steps the more likely it would me to trash it and start being disorganized again.  

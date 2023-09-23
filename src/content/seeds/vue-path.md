@@ -1,13 +1,11 @@
 ---
 title: 'Vue Path'
-slug: "vue-path"
 description: 'Roadmap to conquer vue progressive framework'
 planted: '2023-09-11'
 author: 'Jesus Guerrero'
 tags: ['Web Development', 'Vue', 'Javascript', 'Guide']
 language: 'english'
 status: seedling
-layout: '../../../layouts/Seed.astro'
 ---
 
 

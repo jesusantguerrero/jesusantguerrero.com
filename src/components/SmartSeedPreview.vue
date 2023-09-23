@@ -1,7 +1,7 @@
 <template>
-    <div></div>
+    <div class="bg-primary"></div>
 </template>
-
+ 
 <script>
 import { onMounted } from "vue";
 import tippy, { animateFill, followCursor, hideAll } from "tippy.js";
@@ -33,7 +33,7 @@ export default {
                 if (isSeedLink(event.target)) {
                     let tip; 
                     tip = tippy(event.target, {
-                        theme: 'light',
+                        theme: 'translucent',
                         content: 'Loading...',
                         allowHTML: true,
                         inertia: true,

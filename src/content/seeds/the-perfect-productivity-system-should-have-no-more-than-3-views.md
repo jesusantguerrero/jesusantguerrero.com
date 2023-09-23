@@ -1,13 +1,11 @@
 ---
 title: 'The perfect productivity system should have no more than 3 views'
-slug: "the-perfect-productivity-system-should-have-no-more-than-3-views"
 description: ''
 planted: '2021-10-16'
 author: 'Jesus Guerrero'
 tags: ['Productivity']
 language: 'english'
 status: seedling
-layout: '../../../layouts/Seed.astro'
 ---
 
 In every step of a workflow, you will have views that let you see the information of what you want versus what you need to do to take you there.

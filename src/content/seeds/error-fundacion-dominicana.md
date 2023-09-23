@@ -1,13 +1,11 @@
 ---
 title: 'Error en la fundacion Dominicana'
-slug: "error-fundacion-dominicana"
 description: ''
 planted: '2021-10-15'
 author: 'Jesus Guerrero'
 tags: ['Historia Dominicana']
 language: 'spanish'
 status: budding
-layout: '../../../layouts/Seed.astro'
 ---
 
 En estos ultimos años he estado investigando y analizando el estancamiento politico de la republica dominicana, el porque a pesar
