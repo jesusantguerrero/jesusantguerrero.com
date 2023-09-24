@@ -1,13 +1,13 @@
 ---
 import { getCollection } from "astro:content";
-import SeedLayout from "../../../layouts/SeedLayout.astro";
+import SeedLayout from "../../../../layouts/SeedLayout.astro";
 
 
 // 1. Generate a new path for every collection entry
 export async function getStaticPaths() {
   const seeds = await getCollection('seeds');
   return seeds.map(entry => ({
-    params: { slug: entry.slug }, props: { entry },
+    params: { seed: entry.slug }, props: { entry },
   }));
 }
 
@@ -17,6 +17,6 @@ const { Content } = await entry.render();
 ---
 
 
-<SeedLayout frontmatter={entry.data} slug={entry.slug}>
+<SeedLayout frontmatter={entry.data} slug={entry.slug} preview={true}>
     <Content />
 </SeedLayout>

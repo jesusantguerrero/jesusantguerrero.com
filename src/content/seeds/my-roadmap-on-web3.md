@@ -6,7 +6,7 @@ checked: '2021-12-11'
 author: 'Jesus Guerrero'
 tags: ['Web Development', 'Blockchain', 'Solidity']
 language: 'english'
-status: seedling
+status: evergreen
 ---
 
 I decided to investigate and learn about blockchain, crypto, smart contracts and decentralized apps (dapps) A.K.A Web 3.0 from september 24, of 2021. I got curious about the term from the hype on twitter but it was more hype than truly helpful information with some valuable exceptions.

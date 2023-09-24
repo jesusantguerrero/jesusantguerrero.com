@@ -24,6 +24,7 @@
     "tippy.js": "^6.3.7"
   },
   "dependencies": {
-    "astro-remark-digital-garden": "^0.2.0"
+    "astro-remark-digital-garden": "^0.2.0",
+    "date-fns": "^2.30.0"
   }
 }
