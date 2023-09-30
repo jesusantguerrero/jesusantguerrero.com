@@ -1,6 +1,5 @@
 ---
 title: 'Sobre Dios'
-slug: "sobre-dios"
 description: ''
 planted: '2019-03-30'
 checked: '2019-05-09'
@@ -8,8 +7,8 @@ author: 'Jesus Guerrero'
 tags: ['Religion', 'Thoughts', 'Theology']
 language: 'spanish'
 status: budding
-layout: '../../../layouts/Seed.astro'
 ---
+
 Hace unos años ya me di la tarea de analizar el concepto que nosotros tenemos de Dios y analizarlo fuera de la fe, sin emociones que me aten a inclinarme hacia ninguno de los lados ni la existencia ni la no existencia y esto lo hice de manera inconsciente cuando tenía el hábito de escudriñar las escrituras cristianas todos los días, escuchar predicas casi todos los días y darme cuenta que todo este argumento de “pecado - perdon - salvacion” no es más que un argumento rebuscado, quizás en una manera de buscar abrigo bajo la sombra de un ser con capacidades superiores a nosotros, que creó la vida con un motivo y nos dió un propósito en ella a cada uno de nosotros. Y así no sentirnos tan solos en esta inmensa creación con toques de perfección y precisión milimétrica que hace imposible a algunos, incluyendome, creer que es puro azar; tal vez por el miedo que tenemos al enemigo silencioso y de algo que estamos completamente seguro de que nos alcanzará aunque nos de una vida de ventaja: la muerte, y tener la esperanza de que hay algo después de ella, seguro para controlar el comportamiento de las masas o todas ellas.
 
 primero es necesario dejar claro con esto no trato de convencer a nadie de que crea o no crea, sino de exponer mi punto de vista y dar mis razones por las cuales no me resulta tan sencillo creer(en el concepto de Dios cristiano) porque considero que es un insulto a mi inteligencia.

@@ -1,13 +1,11 @@
 ---
 title: 'Deploying Full Stack apps'
-slug: "deploying-full-stack-apps"
 description: ''
 planted: '2022-02-27'
 author: 'Jesus Guerrero'
 tags: ['development']
 language: 'English'
-status: seedling
-layout: '../../../layouts/Seed.astro'
+status: evergreen
 ---
 
 In today's development world is easier than ever to deploy your projects online with minimal configuration, with frontend and JAM Stack/node powered apps there are a lot of good options: Vercel, Netlify, Gihub Pages, Gitlab Pages but for modern php/laravel powered apps there's no too many. out of [Heroku](https://www.heroku.com/) and  I don't find a good one with modern characteristics as we have in frontend.

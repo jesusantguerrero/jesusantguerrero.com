@@ -1,26 +1,59 @@
 ---
 import Page from "../../layouts/Page.astro";
-import { GardenSeed } from "../../types";
 import GardenSeedPreview from "../../components/GardenSeedPreview.astro";
+import { getCollection } from 'astro:content';
 
 let title = "Garden";
-let GardenSeeds = await Astro.glob<GardenSeed[]>('./seeds/*.md');
+const seeds = await getCollection('seeds');
+
+const evergreens = seeds.filter(seed => seed.data.status == 'evergreen')
+const drafts = seeds.filter(seed => seed.data.status !== 'evergreen')
 ---
 <Page title={title} showLogo={true}>
-    <article class="max-w-4xl pt-20 mx-auto overflow-visible prose text-left text-gray-700">
-        <h2 class="mb-8 text-xl font-bold text-gray-200">Welcome to my Digital Garden</h2>
-        <section class="mx-auto text-gray-300">
-            <p>
-                This is a collection of thoughts, notes, 
-                resources and explorations I'm currently cultivating. 
-                I let myself immerse in some topics of my interest even out of tech.
-            </p>
-        </section>
+    <article class="max-w-7xl pt-20 mx-auto overflow-visible text-left text-gray-700">
+        <header>
+            <h2 class="mb-4 text-xl font-bold text-gray-200">Welcome to my Digital Garden</h2>
+            <section class="mx-auto text-gray-300">
+                <p>
+                    This is a collection of thoughts, notes, 
+                    resources and explorations I'm currently cultivating. 
+                    I let myself immerse in some topics of my interest even out of tech.
+                </p>
+            </section>
+        </header>
 
-        <section class="grid grid-cols-1 gap-4 mt-10 sm:grid-cols-2 md:grid-cols-2">
-            {GardenSeeds.map( seed => 
-                <GardenSeedPreview seed={seed} classes="max-w-md mx-2 my-2" />
-            )}
-        </section>
+        <main class="w-full mt-8 space-y-12">
+            <section class="">
+                <header>
+                    <h2 class="my-2 text-xl font-bold text-gray-200">Evergreen</h2>
+                    <section class="mx-auto text-gray-300">
+                        <p>
+                            Articles close to completions or completed explorations.
+                        </p>
+                    </section>
+                </header>
+                <section class="grid grid-cols-1 gap-4 mt-4 sm:grid-cols-2 md:grid-cols-2">
+                    {evergreens.map( seed => 
+                        <GardenSeedPreview seed={seed} classes="w-full" />
+                    )}
+                </section>
+            </section>
+            <section>
+                <header class="">
+                    <h2 class="my-2 text-xl font-bold text-gray-200">Drafts</h2>
+                    <section class="mx-auto text-gray-300">
+                        <p>
+                            Articles close to completions or completed explorations.
+                        </p>
+                    </section>
+                </header>
+                <section class="grid grid-cols-1 gap-4 mt-4 sm:grid-cols-2 md:grid-cols-3">
+                    {drafts.map( seed => 
+                        <GardenSeedPreview seed={seed} classes="max-w-md" />
+                    )}
+                </section>
+            </section>
+
+        </main>
     </article>
 </Page>

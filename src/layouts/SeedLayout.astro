@@ -1,0 +1,100 @@
+---
+import Header from "../components/Header.vue"
+import SmartSeedPreview from "../components/SmartSeedPreview.vue"
+import { ViewTransitions } from 'astro:transitions';
+import { getCollection } from "astro:content";
+import { parseISO, format } from "date-fns";
+
+import "./../styles/global.css";
+
+const { frontmatter, preview } = Astro.props;
+const pageTitle = `${frontmatter.title} - Jesus Guerrero`
+const pageDescription = `${frontmatter.description}`
+
+const allSeeds = await getCollection('seeds')
+let seeds = allSeeds.map(seed => {
+        return {
+            content: seed.body,
+            ...seed.data,
+            slug: seed.slug,
+            url: `garden/seeds/${seed.slug}`
+        }
+})
+
+seeds = seeds.filter(seed => {
+    return seed.content.toLowerCase().includes(frontmatter.title.toLowerCase())
+});
+
+const parseDate = (dateString: string) => {
+    try {
+        return format(parseISO(dateString), 'dd MMM, yyyy')
+    } catch(err) {
+        return dateString;
+    }
+}
+---
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>{frontmatter.title}</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    
+    <meta name="title" content={pageTitle}>
+    <meta name="description" content={pageDescription}>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jesusantguerrero.com/">
+    <meta property="og:title" content={pageTitle}>
+    <meta property="og:description" content={pageDescription}>
+    <meta property="og:image" content="">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://jesusantguerrero.com/">
+    <meta property="twitter:title" content={pageTitle}>
+    <meta property="twitter:description" content={pageDescription}>
+    <meta property="twitter:image" content="">
+    <ViewTransitions />
+</head>
+<body class="bg-slate-800 text-gray-200">
+    <main class="pb-20">
+        {!preview ? <Header client:visible show-logo={true}  /> : null }
+        <article class={`px-5 md:px-0 ${!preview ? 'py-20' : ''} mx-auto overflow-visible prose`}>
+            <h2 
+                class="flex items-center text-x2 mt-12 font-bold text-accent-400" 
+            >
+                <a href={`/garden`} class=" text-gray-200 hover:text-accent-400 h-full flex items-center mr-2"  > 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="h-6">
+                        <path fill="currentColor" d="M16 22L6 12L16 2l1.775 1.775L9.55 12l8.225 8.225L16 22Z"/>
+                    </svg>
+                </a>
+                <span class="">
+                    {frontmatter.title } 
+                </span>
+            </h2>
+            <div class="md:flex mb-5 md:space-x-5 text-sm text-gray-200">
+                <div>Status: <span class="font-bold text-green-500"><i class="fa fa-seedling"/>{frontmatter.status}</span> </div>
+                <div>PlantDate: <span class="font-bold text-accent-400">{parseDate(frontmatter.planted)}</span></div>
+                <div>Last Update: <span class="font-bold text-accent-400">{parseDate(frontmatter.checked || frontmatter.planted) }</span></div>
+            </div>
+            <section class="text-gray-200 seed-article prose-strong:text-gray-300 prose-blockquote:first-letter:text-accent-400 prose-blockquote:text-orange-400 prose-blockquote:border-orange-500 prose-blockquote:bg-orange-50/5 prose-a:text-accent-500 prose-headings:text-accent-400 prose-code:bg-orange-600/20 prose-code:text-orange-600">
+                <slot />
+                <SmartSeedPreview client:load seeds={seeds} />
+            </section>
+        </article>
+    </main>
+    { !preview ? <footer class="w-full py-5 text-gray-400 border-t" >
+        <div class="mx-auto text-xs max-w-7xl">2021 Made with <span class="font-bold text-accent-400">code</span> by <span class="font-bold underline">Jesus Guerrero</span></div>
+    </footer> : null }
+</body>
+</html>
+
+<style lang="scss" is:global>
+.seed-article a, .seed-article .prose a {
+    &[href*="/garden/seeds/"] {
+        @apply text-dodgerblue-400 font-bold border-dashed border-b no-underline border-dodgerblue-400;
+    }
+}
+</style>

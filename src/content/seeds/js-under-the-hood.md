@@ -1,13 +1,11 @@
 ---
 title: 'Understanding js under the hood'
-slug: "js-under-the-hood"
 description: 'How js code is executed'
 planted: '2022-05-14'
 author: 'Jesus Guerrero'
 tags: ['Web Development', 'JavaScript', 'Fundamentals']
 language: 'english'
 status: seedling
-layout: '../../../layouts/Seed.astro'
 ---
 
 ## Understanding js under the hood

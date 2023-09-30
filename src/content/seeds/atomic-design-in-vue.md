@@ -1,13 +1,11 @@
 ---
 title: 'Atomic Design in vue'
-slug: "atomic-design-in-vue"
 description: ''
 planted: '2022-05-30'
 author: 'Jesus Guerrero'
 tags: ['Development']
 language: 'english'
 status: seedling
-layout: '../../../layouts/Seed.astro'
 ---
 
 How we organize our components structure in a project is a fundamental decision to make, because it will dictate in a big part how extensible, maintainable and testable our application will be. In this post I will try to explain how we can use Atomic Design to organize our components in a Vue project.

@@ -1,13 +1,11 @@
 ---
 title: 'State Management in Vue'
-slug: "state-management-in-vue"
 description: 'Techniques to manage state in Vue'
 planted: '2022-03-05'
 author: 'Jesus Guerrero'
 tags: ['Web Development', 'Vue', 'Javascript', 'State Management']
 language: 'english'
-status: seedling
-layout: '../../../layouts/Seed.astro'
+status: evergreen
 ---
 
 While working with medium/large sized apps you will find a case to have some data, functionality or logic available globally in a single source of truth because you need them in different components and pages across the app, it could be: user data, settings, permissions, etc. Sounds familiar? We refer to the solutions to address this problem as State Management

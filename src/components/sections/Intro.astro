@@ -12,7 +12,7 @@ import SectionTag  from "../SectionTag.astro";
                 />
             </div>
 
-            <div class="px-10 mt-64 space-y-10 text-lg text-gray-200 personal-card_body md:space-y-5 md:px-20 md:mt-0 md:w-8/12">
+            <div class="md:px-10 mt-64 space-y-10 text-lg text-gray-200 personal-card_body md:space-y-5 md:px-20 md:mt-0 md:w-8/12">
                  <p>         
                     I'm a system engineer and full-stack developer from the Dominican Republic 
                     who is passionate about programming in general, web development 
@@ -39,7 +39,7 @@ import SectionTag  from "../SectionTag.astro";
 
 <style lang="scss">
     article {
-        @apply rounded-lg shadow-lg;
+        @apply rounded-lg;
         display: flex;
         align-items: center;
         width: 100%;
@@ -90,7 +90,7 @@ import SectionTag  from "../SectionTag.astro";
                 height: 0;
                 width: 0;
                 border-bottom: 16px solid var(--darken-primary-color);
-                @apply border-white;
+                @apply border-slate-800 z-10;
                 border-right: 20px solid transparent;
                 border-left: 20px solid transparent;
                 border-top: 20px solid transparent;

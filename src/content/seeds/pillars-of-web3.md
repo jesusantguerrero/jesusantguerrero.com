@@ -1,13 +1,11 @@
 ---
 title: 'Pillars of web3'
-slug: "pillars-of-web3"
 description: ' 4 key aspects to take into account to learn web3'
 planted: '2021-12-04'
 author: 'Jesus Guerrero'
 tags: ['Web Development', 'Blockchain', 'Solidity', 'Web3']
 language: 'english'
 status: seedling
-layout: '../../../layouts/Seed.astro'
 ---
 
 I can help to be critic about the things I filter to learn, to see if they are is worthy or at least fun to try. Maybe you're aware about my journey with web3 since I wrote about it a couple of times if not you can read my article [web3 for mortals]() and my [[thoughts on web3]] and [[my-roadmap-on-web3]] it might provide some insights and resources. But in this one I am going to take a more wide and maybe not so detailed aspect of web 3, the pillars.

@@ -14,12 +14,12 @@ const projectEntries = await getCollection('projects');
 >  
     <SearchBox text="Some of my projects" client:visible />
     
-    <div class="mt-10 space-y-5">
+    <div class="mt-10 space-y-5 mb-5 w-full overflow-hidden">
         {projectEntries.map(projectEntry => (
-             <Project project={projectEntry.data} link={`/projects/${projectEntry.slug}`} projectType="code" />
+             <Project project={projectEntry.data} link={`/projects/${projectEntry.slug}`} projectType="code"  className="w-full" target="_blank" />
         ))}
         { portfolio.slice(0, 4).map(project => (
-            <Project project={project} projectType="code" target="_blank" />
+            <Project project={project} projectType="code" className="w-full" target="_blank" />
         ))}
          <div class="flex justify-center w-full">
             <a href="/projects" class="px-5 py-2 mx-auto text-white transition rounded-md shadow-lg hover:bg-primary-400 bg-primary-500 shadow-primary-500/50">All projects</a>

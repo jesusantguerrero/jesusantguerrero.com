@@ -12,7 +12,12 @@ declare module 'astro:content' {
 	export { z } from 'astro/zod';
 
 	type Flatten<T> = T extends { [K: string]: infer U } ? U : never;
-	export type CollectionEntry<C extends keyof AnyEntryMap> = Flatten<AnyEntryMap[C]>;
+
+	export type CollectionKey = keyof AnyEntryMap;
+	export type CollectionEntry<C extends CollectionKey> = Flatten<AnyEntryMap[C]>;
+
+	export type ContentCollectionKey = keyof ContentEntryMap;
+	export type DataCollectionKey = keyof DataEntryMap;
 
 	// This needs to be in sync with ImageMetadata
 	export type ImageFunction = () => import('astro/zod').ZodObject<{
@@ -28,6 +33,7 @@ declare module 'astro:content' {
 				import('astro/zod').ZodLiteral<'webp'>,
 				import('astro/zod').ZodLiteral<'gif'>,
 				import('astro/zod').ZodLiteral<'svg'>,
+				import('astro/zod').ZodLiteral<'avif'>,
 			]
 		>;
 	}>;
@@ -177,11 +183,133 @@ declare module 'astro:content' {
   data: InferEntrySchema<"projects">
 } & { render(): Render[".md"] };
 };
+"seeds": {
+"atomic-design-in-vue.md": {
+	id: "atomic-design-in-vue.md";
+  slug: "atomic-design-in-vue";
+  body: string;
+  collection: "seeds";
+  data: InferEntrySchema<"seeds">
+} & { render(): Render[".md"] };
+"deploying-full-stack-apps.md": {
+	id: "deploying-full-stack-apps.md";
+  slug: "deploying-full-stack-apps";
+  body: string;
+  collection: "seeds";
+  data: InferEntrySchema<"seeds">
+} & { render(): Render[".md"] };
+"dia-de-independencia-2021.md": {
+	id: "dia-de-independencia-2021.md";
+  slug: "dia-de-independencia-2021";
+  body: string;
+  collection: "seeds";
+  data: InferEntrySchema<"seeds">
+} & { render(): Render[".md"] };
+"digital-home-management.md": {
+	id: "digital-home-management.md";
+  slug: "digital-home-management";
+  body: string;
+  collection: "seeds";
+  data: InferEntrySchema<"seeds">
+} & { render(): Render[".md"] };
+"error-fundacion-dominicana.md": {
+	id: "error-fundacion-dominicana.md";
+  slug: "error-fundacion-dominicana";
+  body: string;
+  collection: "seeds";
+  data: InferEntrySchema<"seeds">
+} & { render(): Render[".md"] };
+"js-under-the-hood.md": {
+	id: "js-under-the-hood.md";
+  slug: "js-under-the-hood";
+  body: string;
+  collection: "seeds";
+  data: InferEntrySchema<"seeds">
+} & { render(): Render[".md"] };
+"my-roadmap-on-web3.md": {
+	id: "my-roadmap-on-web3.md";
+  slug: "my-roadmap-on-web3";
+  body: string;
+  collection: "seeds";
+  data: InferEntrySchema<"seeds">
+} & { render(): Render[".md"] };
+"no-ha-habido-un-presidente-bueno-en-rd.md": {
+	id: "no-ha-habido-un-presidente-bueno-en-rd.md";
+  slug: "no-ha-habido-un-presidente-bueno-en-rd";
+  body: string;
+  collection: "seeds";
+  data: InferEntrySchema<"seeds">
+} & { render(): Render[".md"] };
+"pillars-of-web3.md": {
+	id: "pillars-of-web3.md";
+  slug: "pillars-of-web3";
+  body: string;
+  collection: "seeds";
+  data: InferEntrySchema<"seeds">
+} & { render(): Render[".md"] };
+"sobre-dios.md": {
+	id: "sobre-dios.md";
+  slug: "sobre-dios";
+  body: string;
+  collection: "seeds";
+  data: InferEntrySchema<"seeds">
+} & { render(): Render[".md"] };
+"state-management-in-vue.md": {
+	id: "state-management-in-vue.md";
+  slug: "state-management-in-vue";
+  body: string;
+  collection: "seeds";
+  data: InferEntrySchema<"seeds">
+} & { render(): Render[".md"] };
+"the-perfect-productivity-system-should-have-no-more-than-3-views.md": {
+	id: "the-perfect-productivity-system-should-have-no-more-than-3-views.md";
+  slug: "the-perfect-productivity-system-should-have-no-more-than-3-views";
+  body: string;
+  collection: "seeds";
+  data: InferEntrySchema<"seeds">
+} & { render(): Render[".md"] };
+"the-perfect-productivity-system-should-have-short-steps.md": {
+	id: "the-perfect-productivity-system-should-have-short-steps.md";
+  slug: "the-perfect-productivity-system-should-have-short-steps";
+  body: string;
+  collection: "seeds";
+  data: InferEntrySchema<"seeds">
+} & { render(): Render[".md"] };
+"the-perfect-productivity-system.md": {
+	id: "the-perfect-productivity-system.md";
+  slug: "the-perfect-productivity-system";
+  body: string;
+  collection: "seeds";
+  data: InferEntrySchema<"seeds">
+} & { render(): Render[".md"] };
+"thoughts-on-web-3.md": {
+	id: "thoughts-on-web-3.md";
+  slug: "thoughts-on-web-3";
+  body: string;
+  collection: "seeds";
+  data: InferEntrySchema<"seeds">
+} & { render(): Render[".md"] };
+"vue-path.md": {
+	id: "vue-path.md";
+  slug: "vue-path";
+  body: string;
+  collection: "seeds";
+  data: InferEntrySchema<"seeds">
+} & { render(): Render[".md"] };
+};
 
 	};
 
 	type DataEntryMap = {
-		
+		"bookmarks": {
+};
+"books": {
+};
+"playlist": {
+};
+"posts": {
+};
+
 	};
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;

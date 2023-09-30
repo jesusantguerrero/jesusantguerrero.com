@@ -1,13 +1,11 @@
 ---
 title: 'The perfect productivity system'
-slug: "the-perfect-productivity-system"
 description: ''
 planted: '2021-10-15'
 author: 'Jesus Guerrero'
 tags: ['Productivity']
 language: 'english'
 status: seedling
-layout: '../../../layouts/Seed.astro'
 ---
 
 Every person that wants to improve their time management skills dreams about finding the right productivity tool for their case.

@@ -1,26 +1,38 @@
 ---
 import Page from "../../../layouts/Page.astro";
-import GardenSeedPreview, { GardenSeed } from "../../../components/GardenSeedPreview.astro";
+import GardenSeedPreview from "../../../components/GardenSeedPreview.astro";
+import { getCollection } from "astro:content";
 
 let title = "Garden";
 const { tag } = Astro.params;
-let GardenSeeds = await Astro.glob<GardenSeed>('../seeds/*.md');
-GardenSeeds = GardenSeeds.filter(seed => seed.frontmatter.tags.includes(tag))
+const { seeds } = Astro.props;
+
 export async function getStaticPaths() {
-    const tags = ['Historia Dominicana', 'Programming', 'Productivity', 'Religion', 'Thoughts', 'Theology' ,'Web Development', 'Blockchain', 'Solidity', 'Web3'];
-    return tags.map( tag => ({params: { tag}}));
+  const allSeeds = await getCollection("seeds");
+  const uniqueTags = [...new Set(allSeeds.map((seed) => seed.data.tags).flat())];
+
+  return uniqueTags.map((tag) => {
+    const filteredSeeds = allSeeds.filter((seed) =>
+      seed.data.tags.includes(tag)
+    );
+    return {
+      params: { tag },
+      props: { seeds: filteredSeeds },
+    };
+  });
 }
 ---
 <Page title={title}>
     <article class="max-w-5xl pt-20 mx-auto overflow-visible text-left text-gray-700">
         <h2 class="mb-8 text-xl font-bold text-gray-500">Welcome to my Digital Garden</h2>
         <section class="text-sm italic text-gray-500">
-            <p>Results for the tag: <span class="inline-block text-dodgerblue-400">"{ tag }"</span></p>
+            <p>Results for the tag: <span class="inline-block text-dodgerblue-400">"{ tag }"</span> ({seeds.length})</p>
         </section>
 
-        <section class="flex px-2 mt-10 space-x-2">
-            {GardenSeeds.map( seed => 
-                <a href={`/garden/seeds/${seed.slug}`}><GardenSeedPreview seed={seed} classes="max-w-md" /></a>)}
+        <section class="grid grid-cols-1 gap-4 mt-10 sm:grid-cols-2 md:grid-cols-2">
+            {seeds.map( seed => 
+                <GardenSeedPreview seed={seed} classes="max-w-md mx-2 my-2" />
+            )}
         </section>
     </article>
 </Page>

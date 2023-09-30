@@ -10,8 +10,23 @@ const projectCollection = defineCollection({
         author: z.string().optional()
     })
 });
+
+
+const seedCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    planted: z.string(),
+    author: z.string(),
+    tags: z.array(z.string()),
+    language: z.string(),
+    status: z.enum(["seedling", "budding", "evergreen"]),
+  })
+})
 // 3. Export a single `collections` object to register your collection(s)
 //    This key should match your collection directory name in "src/content"
 export const collections = {
+  'seeds': seedCollection,
   'projects': projectCollection,
 };
