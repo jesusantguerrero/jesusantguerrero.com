@@ -7,7 +7,7 @@ interface Props {
 }
 const { title, tags, id} = Astro.props;
 ---
-<article class="px-4 project-section pt-32" id={id}>
+<article class="md:px-4 project-section pt-32" id={id}>
     <section class="flex flex-col section-card md:flex-row">
         <div class="w-4/12 section-card_left">
             <SectionTag
@@ -15,7 +15,7 @@ const { title, tags, id} = Astro.props;
                 tags={tags}
             />
         </div>
-        <div class="px-4 mt-48 text-lg section-card_body md:space-y-5 md:mt-0 md:w-8/12">
+        <div class="md:px-4 mt-48 text-lg section-card_body md:space-y-5 md:mt-0 md:w-8/12 w-full">
             <slot />
         </div>
     </section>
