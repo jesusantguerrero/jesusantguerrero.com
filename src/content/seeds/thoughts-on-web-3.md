@@ -1,13 +1,9 @@
 ---
 title: Thoughts on web 3
 description: Roadmap to my first Dapp
-planted: 2021-10-28
+planted: "2021-10-28"
 author: Jesus Guerrero
-tags:
-  - Web
-  - Development
-  - Blockchain
-  - Solidity
+tags: [ "Development", "Blockchain", "Solidity"]
 language: english
 status: seedling
 ---
