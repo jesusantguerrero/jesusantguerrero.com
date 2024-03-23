@@ -1,10 +1,10 @@
 ---
-title: 'Thoughts on web 3'
-description: 'Roadmap to my first Dapp'
-planted: '2021-10-28'
-author: 'Jesus Guerrero'
-tags: ['Web Development', 'Blockchain', 'Solidity']
-language: 'english'
+title: Thoughts on web 3
+description: Roadmap to my first Dapp
+planted: "2021-10-28"
+author: Jesus Guerrero
+tags: [ "Development", "Blockchain", "Solidity"]
+language: english
 status: seedling
 ---
 
