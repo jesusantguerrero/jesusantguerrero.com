@@ -24,6 +24,7 @@
     "tippy.js": "^6.3.7"
   },
   "dependencies": {
+    "@astrojs/netlify": "^5.2.1",
     "astro-remark-digital-garden": "^0.2.0",
     "date-fns": "^3.6.0"
   }
