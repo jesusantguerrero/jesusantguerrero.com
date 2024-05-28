@@ -1,3 +1,13 @@
+---
+title: 'Advanced app structure in Vue'
+description: ''
+planted: '2023-12-27'
+author: 'Jesus Guerrero'
+tags: ['Development']
+language: 'english'
+status: seedling
+---
+
 Choosing the right folder structure for a middle size or big vue application might be intimidating and its even more when are no many suggestions about the topic
 
 From 2017 to the moment of writing this post I've been working on Vue applications years from medium to large, stablished apps migrating to Vue to projects at the start of the process. from Nuxt, Laravel and Vue SPA an here I will try my best to describe what I thing have been the more intuitive easy to work and maintain folder structure
