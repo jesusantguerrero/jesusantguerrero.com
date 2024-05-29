@@ -1,7 +1,7 @@
 <script setup lang="ts">
     import { actions, getActionProps } from "astro:actions";
 
-    const handleAction = async () => {
+    const handleAction = async (e) => {
         const formData = new FormData(e.target);
         const result = await actions.newsletter(formData);
     }
@@ -16,7 +16,7 @@
         <section class="flex space-x-4">
             <section class="flex flex-col space-y-2">
                 <label for="email">Full Name</label>
-                <input name="fullname" type="name" placeholder="Full Name" id="full-name" class="flex items-center h-10 px-2 py-2 space-x-2 text-gray-200 border rounded-md border-slate-400 bg-slate-900">
+                <input name="fullName" type="name" placeholder="Full Name" id="full-name" class="flex items-center h-10 px-2 py-2 space-x-2 text-gray-200 border rounded-md border-slate-400 bg-slate-900">
             </section>
             <section class="flex flex-col space-y-2">
                 <label for="email">Email</label>
