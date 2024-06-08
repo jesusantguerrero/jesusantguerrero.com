@@ -20,7 +20,7 @@
             </section>
             <section class="flex flex-col space-y-2">
                 <label for="email">Email</label>
-                <input name="email" type="email" id="email" class="flex items-center h-10 px-2 py-2 space-x-2 text-gray-200 border rounded-md border-slate-400 bg-slate-900" />
+                <input name="email" type="email" id="email" placeholder="me@example.com" class="flex items-center h-10 px-2 py-2 space-x-2 text-gray-200 border rounded-md border-slate-400 bg-slate-900" />
             </section>
         </section>
         <section class="flex flex-col mt-4 space-y-2">

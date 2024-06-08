@@ -1,5 +1,6 @@
 import { defineAction, z } from "astro:actions";
-import { db, PersonalMessage, isDbError } from "astro:db"
+import { sendEmail } from "../utils/sendEmail";
+// import { db, PersonalMessage, isDbError } from "astro:db"
 
 export const server = {
   newsletter: defineAction({
@@ -10,22 +11,12 @@ export const server = {
       message: z.string(),
     }),
     handler: async ({ email, message, fullName }) => {
-      console.log({email, fullName, message })
-      try {
-        await db.insert(PersonalMessage).values({
-          email,
-          fullName,
-          message,
-        });
-      } catch (e) {
-        console.log(e)
-        if (isDbError(e)) {
-          return new Response(`Cannot send the message \n\n${e.message}`, { status: 400 });
-        }
-        return new Response('An unexpected error occurred', { status: 500 });
-      }
-      console.log("Message saved")
-      // call a mailing service, or store to a database
+      console.log({email, fullName, message }, import.meta.env.RESEND_API_KEY)
+      sendEmail({
+        email,
+        message,
+        subject: `From ${fullName}<${email}>`
+      }, import.meta.env.RESEND_API_KEY)
       return { success: true };
     },
   }),
