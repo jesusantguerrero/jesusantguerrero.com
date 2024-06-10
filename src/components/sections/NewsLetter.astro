@@ -1,0 +1,14 @@
+---
+import Newsletter from "../Newsletter.vue";
+import BlockSection from "./BlockSection.astro";
+
+---
+<BlockSection 
+    id="Contact"
+    title="Contact"
+    tags={["Fill the contact form to get in touch"]}
+>
+    <div class="flex items-center justify-center mt-10 mb-5 space-y-5">
+        <Newsletter client:load />
+    </div>
+</BlockSection>

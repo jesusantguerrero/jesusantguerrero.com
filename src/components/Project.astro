@@ -1,4 +1,6 @@
 ---
+import Image from 'astro/components/Image.astro';
+
 export interface Project {
     title: string;
     description: string;
@@ -55,16 +57,19 @@ const typeIcon = () => {
             <span set:html={icon()} />
         </h4>
         { project.imageUrl ?  <section class="project-card">
-           <img src={project.imageUrl}  
+           <Image 
+                src={project.imageUrl}  
+                inferSize={true}
                 transition:persist="image" 
                 transition:animate="slide" 
-                class="rounded-md w-full mt-4" 
+                alt={project.title}
+                class="w-full mt-4 rounded-md" 
             />
         </section>
         : null }
-        <p class="text-sm whitespace-pre-wrap mt-4"> { project.description }</p>
-        <section class="gap-2 mt-2 flex flex-wrap"> { project.technologies && project.technologies.map(tech => (
-            <span class="py-1 bg-accent-100/20 px-2 mr-2 mb-1 text-xs rounded-md text-accent-400 font-bold">{ tech }</span>
+        <p class="mt-4 text-sm whitespace-pre-wrap"> { project.description }</p>
+        <section class="flex flex-wrap gap-2 mt-2"> { project.technologies && project.technologies.map(tech => (
+            <span class="px-2 py-1 mb-1 mr-2 text-xs font-bold rounded-md bg-accent-100/20 text-accent-400">{ tech }</span>
         ))}</section>
     </div>
 </a>
