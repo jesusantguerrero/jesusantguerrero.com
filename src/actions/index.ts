@@ -1,6 +1,5 @@
 import { defineAction, z } from "astro:actions";
 import { sendEmail } from "../utils/sendEmail";
-// import { db, PersonalMessage, isDbError } from "astro:db"
 
 export const server = {
   newsletter: defineAction({

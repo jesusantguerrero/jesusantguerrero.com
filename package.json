@@ -27,7 +27,6 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
-    "@astrojs/db": "^0.11.4",
     "@astrojs/netlify": "^5.2.1",
     "astro-remark-digital-garden": "^0.2.0",
     "date-fns": "^3.6.0",
