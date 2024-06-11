@@ -1,5 +1,4 @@
 import { defineConfig } from 'astro/config';
-import db from '@astrojs/db';
 import vue from "@astrojs/vue";
 import tailwind from "@astrojs/tailwind";
 
