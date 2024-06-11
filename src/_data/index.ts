@@ -2,7 +2,7 @@ interface IProject {
   title: string
   technologies: string[]
   description: string
-  imageUrl: string
+  imageUrl?: string
   link: string
   pinned?: boolean
   type: 'fullstack' | 'package' | 'frontend' | 'backend' | 'template'
@@ -43,7 +43,7 @@ export const portfolio: IProject[] = [
     title: 'Zen.',
     technologies: ['HTML', 'CSS / SCSS', 'TailwindCSS', 'Javascript', 'Vue', 'Firebase Auth', 'Firestore', 'Firebase Functions', 'Express.js'],
     description: 'Zen is a productivity app that integrates Eisenhower Matrix with The Pomodoro Technique.',
-    // imageUrl: 'https://private-user-images.githubusercontent.com/17421742/337866170-010d776a-2cc5-469e-ae52-92d3180f8ac4.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTc4NDExNTUsIm5iZiI6MTcxNzg0MDg1NSwicGF0aCI6Ii8xNzQyMTc0Mi8zMzc4NjYxNzAtMDEwZDc3NmEtMmNjNS00NjllLWFlNTItOTJkMzE4MGY4YWM0LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA2MDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNjA4VDEwMDA1NVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWIwOWMzMGEwNGViYzZmZjM4YmI4Y2JiMmM1NmJkY2RlZWQ1NDc4ZWI5Y2I3NGE4NzczOTBiMjg4ZGZjOTExODkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.ShevQGiqp3IXg1eflH0EulnBvFE1zeZC49l417LSyQI',
+    imageUrl: 'https://private-user-images.githubusercontent.com/17421742/337866170-010d776a-2cc5-469e-ae52-92d3180f8ac4.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTc4NDExNTUsIm5iZiI6MTcxNzg0MDg1NSwicGF0aCI6Ii8xNzQyMTc0Mi8zMzc4NjYxNzAtMDEwZDc3NmEtMmNjNS00NjllLWFlNTItOTJkMzE4MGY4YWM0LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA2MDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNjA4VDEwMDA1NVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWIwOWMzMGEwNGViYzZmZjM4YmI4Y2JiMmM1NmJkY2RlZWQ1NDc4ZWI5Y2I3NGE4NzczOTBiMjg4ZGZjOTExODkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.ShevQGiqp3IXg1eflH0EulnBvFE1zeZC49l417LSyQI',
     link: 'https://zenboard.app/',
     type: 'fullstack',
   },
@@ -51,7 +51,7 @@ export const portfolio: IProject[] = [
     title: 'ICLoan',
     technologies: ['HTML', 'CSS / SCSS', 'TailwindCSS', 'Javascript', 'Vue', 'PHP', 'Laravel', 'MySql', 'Docker'],
     description: 'Loan & Property Management Software that can handle properties with multiple units, owner distribution, rental contracts and rental expenses along with loan with rates.',
-    // imageUrl: 'https://private-user-images.githubusercontent.com/17421742/337867279-eb28873b-8ab8-47d7-9c51-3b0f25b42ef2.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTc4NDE4NjAsIm5iZiI6MTcxNzg0MTU2MCwicGF0aCI6Ii8xNzQyMTc0Mi8zMzc4NjcyNzktZWIyODg3M2ItOGFiOC00N2Q3LTljNTEtM2IwZjI1YjQyZWYyLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA2MDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNjA4VDEwMTI0MFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWQwNDdlYmM4ZTY1N2JjYzZjNDI4ZDY2ZmIzMTA4ZWVkZWU3ZTkxNjI5ZDFjMmY2NDBkZTU1OWFiMDVlZTRjZWEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.naJ67GpNM6ucdCZCWtlCtW_lNe28EvNPqgUHFDC4o2s',
+    imageUrl: '',
     link: 'https://github.com/jesusantguerrero/sunday',
     pinned: true,
     type: 'fullstack'
@@ -60,7 +60,7 @@ export const portfolio: IProject[] = [
     title: 'Sunday',
     technologies: ['HTML', 'CSS / SCSS', 'TailwindCSS', 'Javascript', 'Vue', 'PHP', 'Laravel', 'MySql', 'Docker'],
     description: 'IC Daily is a multi purpose productivity inspired on Monday.',
-    imageUrl: 'https://raw.githubusercontent.com/jesusantguerrero/sunday/master/resources/js/documentation/assets/images/img2.PNG',
+    imageUrl: '',
     link: 'https://github.com/jesusantguerrero/sunday',
     pinned: true,
     type: 'fullstack'
@@ -104,21 +104,21 @@ export const projects: Record<string, IProjectSection > = {
         title: 'Insane Treasurer',
         technologies: ['PHP', 'Laravel', 'MySql', 'Paypal'],
         description: 'Laravel package to handle subscriptions via paypal.',
-        image: '',
+        imageUrl: '',
         link: 'https://github.com/jesusantguerrero/insane-treasurer',
         type: 'package', 
       },{
         title: 'php-querify',
         technologies: ['PHP', 'Laravel', 'MySql'],
         description: 'Php version of https://github.com/jesusantguerrero/adonisjs-querify',
-        image: '',
+        imageUrl: '',
         link: 'https://github.com/jesusantguerrero/php-querify',
         type: 'package', 
       }, {
         title: 'insane-journal',
         technologies: ['PHP', 'Laravel', 'MySql'],
         description: "Laravel package to handle accountant journals.",
-        image: '',
+        imageUrl: '',
         link: 'https://github.com/insane-code/journal',
         type: 'package',
 
@@ -131,7 +131,7 @@ export const projects: Record<string, IProjectSection > = {
       title: 'lumiere',
       technologies: ['Vue', 'Vuetify', 'Firebase', 'Firestore', 'Firebase Auth', 'Firebase Functions'],
       description: 'Vue.js app to manage your finances.',
-      image: '',
+      imageUrl: '',
       link: 'https://github.com/jesusantguerrero/lumiere',
       type: 'template',
     },
@@ -139,7 +139,7 @@ export const projects: Record<string, IProjectSection > = {
         title: 'lumiere-utils (WIP)',
         technologies: ['Vue', 'Firebase', 'supabase'],
         description: 'Abstraction of Firebase and Supabase providers to build frontent apps with Lumiere.',
-        image: '',
+        imageUrl: '',
         link: 'https://github.com/jesusantguerrero/lumiere-utils',
         type: 'template',
     },
@@ -147,7 +147,7 @@ export const projects: Record<string, IProjectSection > = {
       title: 'atmosphere-ui',
       technologies: ['Vue', 'storybook','jest','vue-testing-library'],
       description: 'Vue.js app to manage your finances.',
-      image: '',
+      imageUrl: '',
       link: '',
       type: 'template',
     }
@@ -160,7 +160,7 @@ export const projects: Record<string, IProjectSection > = {
         title: 'RoosterFight',
         technologies: ['Vue', 'ethers.js', 'Ethereum', 'Solidity', 'hardhat', 'Polygon'],
         description: 'RoosterFight is an NFT game where you can claim and train a Rooster to fight and reach the top of the tournaments.',
-        image: '',
+        imageUrl: '',
         link: 'https://github.com/jesusantguerrero/chainlink-hackathon',
         type: 'fullstack',
       },
@@ -168,14 +168,14 @@ export const projects: Record<string, IProjectSection > = {
         title: 'CryptoBenders',
         technologies: ['Vue', 'ethers.js', 'Polygon'],
         description: 'CryptoBenders is an NFT market place where you can buy and sell crypto assets.',
-        image: '',
+        imageUrl: '',
         link: 'https://github.com/jesusantguerrero/crypto-bender',
         type: 'frontend',
       }, {
         title: 'BendingBattle',
         technologies: ['Vue', 'ethers.js', 'Ethereum', 'Solidity', 'hardhat', 'Polygon'],
         description: 'My first Web3.0 project, card game inspired in Avatar - The Legend of Aang',
-        image: '',
+        imageUrl: '',
         link: 'https://github.com/jesusantguerrero/bending-battle',
         type: 'fullstack',
       }, 
@@ -183,7 +183,7 @@ export const projects: Record<string, IProjectSection > = {
         title: 'vue-ethers',
         technologies: ['Vue', 'ethers.js', 'Moralis'],
         description: 'Vue package to interact with the Ethereum blockchain.',
-        image: '',
+        imageUrl: '',
         link: 'https://github.com/jesusantguerrero/vue-ethers',
         type: 'package',
       },
@@ -191,7 +191,7 @@ export const projects: Record<string, IProjectSection > = {
         title: 'vue-dapp',
         technologies: ['Vue', 'ethers.js', 'Moralis'],
         description: 'Advanced hardhat x Vue x Moralis x Chainlink Oracles project setup',
-        image: '',
+        imageUrl: '',
         link: 'https://github.com/jesusantguerrero/vue-dapp',
         type: 'template',
       }

@@ -12,7 +12,7 @@ const { title, tags, id} = Astro.props;
         <div class="w-4/12 section-card_left">
             <SectionTag
                 title={title}
-                tags={tags}
+                tags={tags ?? []}
             />
         </div>
         <div class="md:px-4 mt-48 text-lg section-card_body md:space-y-5 md:mt-0 md:w-8/12 w-full">

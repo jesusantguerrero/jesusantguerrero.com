@@ -4,7 +4,7 @@ export const sendEmail = ({ email, subject, message}: { email: string, message: 
 const resend = new Resend(apiKey);
 
 (async function () {
-  const { data, error } = await resend.emails.send({
+  const { error } = await resend.emails.send({
     from: 'My Site <onboarding@resend.dev>',
     to: import.meta.env.MY_EMAIL ?? 'jesusant.guerrero@gmail.com',
     subject: subject ?? 'contact form',

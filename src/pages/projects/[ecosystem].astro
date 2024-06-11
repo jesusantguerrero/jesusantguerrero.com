@@ -1,7 +1,8 @@
 ---
 import Page from "../../layouts/Page.astro";
 import Project from '../../components/Project.astro';
-import { projects, IProjectSection } from "../../_data";
+import { projects } from "../../_data";
+import type { IProjectSection } from "../../_data";
 
 const params = Astro.params;
 const filteredProjects = Object.entries(projects)
