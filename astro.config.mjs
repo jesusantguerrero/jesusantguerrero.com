@@ -1,5 +1,5 @@
-import vue from "@astrojs/vue";
 import { defineConfig } from 'astro/config';
+import vue from "@astrojs/vue";
 import tailwind from "@astrojs/tailwind";
 
 import netlify from "@astrojs/netlify";
@@ -17,6 +17,10 @@ export default defineConfig({
       }]]
     }]
   },
-  integrations: [vue(), tailwind()],
+  integrations: [
+    // db(),
+    vue(), 
+    tailwind(), 
+  ],
   adapter: netlify()
 });

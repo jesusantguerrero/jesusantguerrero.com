@@ -19,7 +19,7 @@ query getAccount($user: String!) {
   }
 }`;
 
-export const fetchGQL = async (query, variables = {}) => {
+export const fetchGQL = async (query: any, variables = {}) => {
   return await fetch(HASHNODE_URL, {
     method: 'post',
     headers: {
@@ -32,7 +32,7 @@ export const fetchGQL = async (query, variables = {}) => {
   })
 }
 
-const fetchDevtoPosts = async (username) => {
+const fetchDevtoPosts = async (username: string) => {
   try {
     const response = await fetch(`${DEVTO_URL}/articles?username=${username}`);
     const data = await response.json();
@@ -47,12 +47,12 @@ const fetchDevtoPosts = async (username) => {
  * @param {string} user
  * @returns {Promise<HashnodeUser>}
  */
-export const fetchPostsByUser = async (user, count = 0) => {
+export const fetchPostsByUser = async (user: string, count = 0) => {
   const posts = await fetchDevtoPosts(user);
   return count ? posts.slice(0 , count).map(mapToPost): posts.map(mapToPost) || [];
 }
 
-function mapToPost(post) {
+function mapToPost(post: Record<string, string>) {
     return {
         title: post.title,
         description: post.description,

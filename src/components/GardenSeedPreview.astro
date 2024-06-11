@@ -1,5 +1,5 @@
 ---
-import { CollectionEntry } from "astro:content";
+import type { CollectionEntry } from "astro:content";
 
 export interface Props {
     seed: CollectionEntry<'seeds'>;
@@ -8,7 +8,7 @@ export interface Props {
 
 const { seed, classes } = Astro.props;
 
-const getIcon = (status) => {
+const getIcon = (status: string) => {
     let icon = '';
     switch (status) {
         case 'budding':

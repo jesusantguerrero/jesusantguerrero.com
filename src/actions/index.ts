@@ -1,16 +1,21 @@
 import { defineAction, z } from "astro:actions";
-
+import { sendEmail } from "../utils/sendEmail";
 
 export const server = {
   newsletter: defineAction({
     accept: "form",
     input: z.object({
+      fullName: z.string(),
       email: z.string().email(),
-      receivePromo: z.boolean(),
+      message: z.string(),
     }),
-    handler: async ({ email, receivePromo }) => {
-      console.log(email, receivePromo )
-      // call a mailing service, or store to a database
+    handler: async ({ email, message, fullName }) => {
+      console.log({email, fullName, message }, import.meta.env.RESEND_API_KEY)
+      sendEmail({
+        email,
+        message,
+        subject: `From ${fullName}<${email}>`
+      }, import.meta.env.RESEND_API_KEY)
       return { success: true };
     },
   }),

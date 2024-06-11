@@ -6,6 +6,7 @@ export interface Project {
     description: string;
     technologies: string[];
     imageUrl?: string
+    link?: string
 }
 export interface Props {
     project: Partial<Project>;
@@ -60,9 +61,11 @@ const typeIcon = () => {
            <Image 
                 src={project.imageUrl}  
                 inferSize={true}
+                // width="500"
+                // height="500"
                 transition:persist="image" 
                 transition:animate="slide" 
-                alt={project.title}
+                alt={project.title ?? 'image'}
                 class="w-full mt-4 rounded-md" 
             />
         </section>
