@@ -12,9 +12,9 @@ const projectEntries = await getCollection('projects');
     title="Projects"
     tags={["Some of the stuff I'm most proud about"]}  
 >  
-    <SearchBox text="Some of my projects" client:visible />
+    <SearchBox text="Some of my best projects" client:visible />
     
-    <div class="mt-10 grid md:grid-cols-2 gap-2 mb-5 w-full overflow-hidden">
+    <div class="grid w-full gap-2 mt-10 mb-5 overflow-hidden md:grid-cols-2">
         {projectEntries.map(projectEntry => (
              <Project project={projectEntry.data} link={`/projects/${projectEntry.slug}`} projectType="code"  className="w-full" target="_blank" />
         ))}

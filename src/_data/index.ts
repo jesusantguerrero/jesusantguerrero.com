@@ -1,3 +1,5 @@
+import icLoanDashboard from "../assets/icloan-dashboard.png";
+
 interface IProject {
   title: string
   technologies: string[]
@@ -7,6 +9,7 @@ interface IProject {
   pinned?: boolean
   type: 'fullstack' | 'package' | 'frontend' | 'backend' | 'template'
 }
+
 
 export interface IProjectSection {
   title: string
@@ -30,6 +33,33 @@ export const skills = {
 }
 
 export const portfolio: IProject[] = [
+ 
+  {
+    title: 'Zen.',
+    technologies: ['HTML', 'CSS / SCSS', 'TailwindCSS', 'Javascript', 'Vue', 'Firebase Auth', 'Firestore', 'Firebase Functions', 'Express.js'],
+    description: 'Zen is a productivity app that integrates Eisenhower Matrix with The Pomodoro Technique.',
+    imageUrl: 'https://private-user-images.githubusercontent.com/17421742/337866170-010d776a-2cc5-469e-ae52-92d3180f8ac4.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTc4NDExNTUsIm5iZiI6MTcxNzg0MDg1NSwicGF0aCI6Ii8xNzQyMTc0Mi8zMzc4NjYxNzAtMDEwZDc3NmEtMmNjNS00NjllLWFlNTItOTJkMzE4MGY4YWM0LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA2MDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNjA4VDEwMDA1NVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWIwOWMzMGEwNGViYzZmZjM4YmI4Y2JiMmM1NmJkY2RlZWQ1NDc4ZWI5Y2I3NGE4NzczOTBiMjg4ZGZjOTExODkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.ShevQGiqp3IXg1eflH0EulnBvFE1zeZC49l417LSyQI',
+    link: 'https://zenboard.app/',
+    type: 'fullstack',
+  },
+  {
+    title: 'ICLoan',
+    technologies: ['HTML', 'CSS / SCSS', 'TailwindCSS', 'Javascript', 'Vue', 'PHP', 'Laravel', 'MySql', 'Docker'],
+    description: 'Loan & Property Management Software that can handle properties with multiple units, owner distribution, rental contracts and rental expenses along with loan with rates.',
+    imageUrl: icLoanDashboard.src,
+    link: 'https://github.com/jesusantguerrero/prestapp',
+    pinned: true,
+    type: 'fullstack'
+  },
+  {
+    title: 'Sunday',
+    technologies: ['HTML', 'CSS / SCSS', 'TailwindCSS', 'Javascript', 'Vue', 'PHP', 'Laravel', 'MySql', 'Docker'],
+    description: 'IC Daily is a multi purpose productivity inspired on Monday.',
+    imageUrl: 'https://raw.githubusercontent.com/jesusantguerrero/sunday/master/resources/js/documentation/assets/images/img2.png',
+    link: 'https://github.com/jesusantguerrero/sunday',
+    pinned: true,
+    type: 'fullstack'
+  },
   {
     title: 'Atmosphere-ui',
     technologies: ['Vue', 'vitest', 'storybook', 'TailwindCSS'],
@@ -38,32 +68,6 @@ export const portfolio: IProject[] = [
     link: 'https://github.com/jesusantguerrero/atmosphere-ui',
     type: 'package',
     pinned: false
-  },
-  {
-    title: 'Zen.',
-    technologies: ['HTML', 'CSS / SCSS', 'TailwindCSS', 'Javascript', 'Vue', 'Firebase Auth', 'Firestore', 'Firebase Functions', 'Express.js'],
-    description: 'Zen is a productivity app that integrates Eisenhower Matrix with The Pomodoro Technique.',
-    // imageUrl: 'https://private-user-images.githubusercontent.com/17421742/337866170-010d776a-2cc5-469e-ae52-92d3180f8ac4.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTc4NDExNTUsIm5iZiI6MTcxNzg0MDg1NSwicGF0aCI6Ii8xNzQyMTc0Mi8zMzc4NjYxNzAtMDEwZDc3NmEtMmNjNS00NjllLWFlNTItOTJkMzE4MGY4YWM0LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA2MDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNjA4VDEwMDA1NVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWIwOWMzMGEwNGViYzZmZjM4YmI4Y2JiMmM1NmJkY2RlZWQ1NDc4ZWI5Y2I3NGE4NzczOTBiMjg4ZGZjOTExODkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.ShevQGiqp3IXg1eflH0EulnBvFE1zeZC49l417LSyQI',
-    link: 'https://zenboard.app/',
-    type: 'fullstack',
-  },
-  {
-    title: 'ICLoan',
-    technologies: ['HTML', 'CSS / SCSS', 'TailwindCSS', 'Javascript', 'Vue', 'PHP', 'Laravel', 'MySql', 'Docker'],
-    description: 'Loan & Property Management Software that can handle properties with multiple units, owner distribution, rental contracts and rental expenses along with loan with rates.',
-    imageUrl: '',
-    link: 'https://github.com/jesusantguerrero/sunday',
-    pinned: true,
-    type: 'fullstack'
-  },
-  {
-    title: 'Sunday',
-    technologies: ['HTML', 'CSS / SCSS', 'TailwindCSS', 'Javascript', 'Vue', 'PHP', 'Laravel', 'MySql', 'Docker'],
-    description: 'IC Daily is a multi purpose productivity inspired on Monday.',
-    imageUrl: '',
-    link: 'https://github.com/jesusantguerrero/sunday',
-    pinned: true,
-    type: 'fullstack'
   },
 ]
 
