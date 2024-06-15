@@ -65,7 +65,7 @@ const parseDate = (dateString: string) => {
             <h2 
                 class="flex items-center mt-12 font-bold text-x2 text-accent-400" 
             >
-                <a href={`/garden`} class="flex items-center h-full mr-2 text-gray-200  hover:text-accent-400"  > 
+                <a href={`/garden`} class="flex items-center h-full mr-2 text-gray-200 hover:text-accent-400"  > 
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="h-6">
                         <path fill="currentColor" d="M16 22L6 12L16 2l1.775 1.775L9.55 12l8.225 8.225L16 22Z"/>
                     </svg>
@@ -102,9 +102,12 @@ const parseDate = (dateString: string) => {
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SLLPWB6194"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-SLLPWB6194');
+    // @ts-ignore
+    window.dataLayer = window.dataLayer || [];
+    // @ts-ignore
+    function gtag(){dataLayer.push(arguments);}
+    // @ts-ignore
+    gtag('js', new Date());
+    // @ts-ignore
+    gtag('config', 'G-SLLPWB6194');
 </script>

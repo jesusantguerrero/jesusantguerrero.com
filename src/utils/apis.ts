@@ -42,11 +42,6 @@ const fetchDevtoPosts = async (username: string) => {
   }
 }
 
-/**
- * fetch hashnode account and publication information of a given user
- * @param {string} user
- * @returns {Promise<HashnodeUser>}
- */
 export const fetchPostsByUser = async (user: string, count = 0) => {
   const posts = await fetchDevtoPosts(user);
   return count ? posts.slice(0 , count).map(mapToPost): posts.map(mapToPost) || [];
