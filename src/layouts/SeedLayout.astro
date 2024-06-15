@@ -58,14 +58,14 @@ const parseDate = (dateString: string) => {
     <meta property="twitter:image" content="">
     <ViewTransitions />
 </head>
-<body class="bg-slate-800 text-gray-200">
+<body class="text-gray-200 bg-slate-800">
     <main class="pb-20">
         {!preview ? <Header client:visible show-logo={true}  /> : null }
         <article class={`px-5 md:px-0 ${!preview ? 'py-20' : ''} mx-auto overflow-visible prose`}>
             <h2 
-                class="flex items-center text-x2 mt-12 font-bold text-accent-400" 
+                class="flex items-center mt-12 font-bold text-x2 text-accent-400" 
             >
-                <a href={`/garden`} class=" text-gray-200 hover:text-accent-400 h-full flex items-center mr-2"  > 
+                <a href={`/garden`} class="flex items-center h-full mr-2 text-gray-200  hover:text-accent-400"  > 
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="h-6">
                         <path fill="currentColor" d="M16 22L6 12L16 2l1.775 1.775L9.55 12l8.225 8.225L16 22Z"/>
                     </svg>
@@ -74,7 +74,7 @@ const parseDate = (dateString: string) => {
                     {frontmatter.title } 
                 </span>
             </h2>
-            <div class="md:flex mb-5 md:space-x-5 text-sm text-gray-200">
+            <div class="mb-5 text-sm text-gray-200 md:flex md:space-x-5">
                 <div>Status: <span class="font-bold text-green-500"><i class="fa fa-seedling"/>{frontmatter.status}</span> </div>
                 <div>PlantDate: <span class="font-bold text-accent-400">{parseDate(frontmatter.planted)}</span></div>
                 <div>Last Update: <span class="font-bold text-accent-400">{parseDate(frontmatter.checked || frontmatter.planted) }</span></div>
@@ -98,3 +98,13 @@ const parseDate = (dateString: string) => {
     }
 }
 </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SLLPWB6194"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SLLPWB6194');
+</script>

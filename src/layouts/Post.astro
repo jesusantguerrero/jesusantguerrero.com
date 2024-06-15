@@ -11,8 +11,8 @@ const { content } = Astro.props;
     <title>{content.title}</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 </head>
-<body class="bg-slate-800 text-gray-200">
-    <main class="pb-20 px-5 md:px-0">
+<body class="text-gray-200 bg-slate-800">
+    <main class="px-5 pb-20 md:px-0">
         <Header client:visible show-logo={true} />
         <article class="max-w-5xl pt-20 mx-auto overflow-visible">
             <h1 class="mb-1 text-xl font-bold text-gray-200"> {content.title }</h1>
@@ -38,3 +38,13 @@ const { content } = Astro.props;
     }
 }
 </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SLLPWB6194"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SLLPWB6194');
+</script>
