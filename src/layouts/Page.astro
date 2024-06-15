@@ -36,7 +36,7 @@ const { title, showLogo } = Astro.props;
 <body class="bg-slate-800">
     <main class="pb-20">
         <Header client:load show-logo={showLogo}></Header>
-        <main class="px-5 md:px-0 py-20">
+        <main class="px-5 py-20 md:px-0">
             <slot />
         </main>
     </main>
@@ -49,3 +49,13 @@ html {
     background: white;
 }
 </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SLLPWB6194"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SLLPWB6194');
+</script>
