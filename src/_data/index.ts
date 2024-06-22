@@ -125,8 +125,11 @@ export const projects: Record<string, IProjectSection > = {
         imageUrl: '',
         link: 'https://github.com/insane-code/journal',
         type: 'package',
-
-      }
+      },
+      ...portfolio.filter(project => project.technologies.includes('Laravel')).map(project => ({
+        ...project,
+        imageUrl: ''
+      }))
     ]
   },
   vue: {
@@ -147,14 +150,10 @@ export const projects: Record<string, IProjectSection > = {
         link: 'https://github.com/jesusantguerrero/lumiere-utils',
         type: 'template',
     },
-    {
-      title: 'atmosphere-ui',
-      technologies: ['Vue', 'storybook','jest','vue-testing-library'],
-      description: 'Vue.js app to manage your finances.',
-      imageUrl: '',
-      link: '',
-      type: 'template',
-    }
+    ...portfolio.filter(project => project.technologies.includes('Vue') && !project.technologies.includes('Laravel') ).map(project => ({
+      ...project,
+      imageUrl: ''
+    }))
   ]
   },
   web3: {
