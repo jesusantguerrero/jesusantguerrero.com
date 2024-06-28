@@ -18,7 +18,7 @@ const projectEntries = await getCollection('projects');
         {projectEntries.map(projectEntry => (
              <Project project={projectEntry.data} link={`/projects/${projectEntry.slug}`} projectType="code"  className="w-full" target="_blank" />
         ))}
-        { portfolio.slice(0, 4).map(project => (
+        { portfolio.slice(0, 5).map(project => (
             <Project project={project} projectType="code" className="w-full" target="_blank" />
         ))}
     </div>
