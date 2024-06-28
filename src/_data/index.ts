@@ -38,7 +38,7 @@ export const portfolio: IProject[] = [
     title: 'Zen.',
     technologies: ['HTML', 'CSS / SCSS', 'TailwindCSS', 'Javascript', 'Vue', 'Firebase Auth', 'Firestore', 'Firebase Functions', 'Express.js'],
     description: 'Zen is a productivity app that integrates Eisenhower Matrix with The Pomodoro Technique.',
-    imageUrl: 'https://private-user-images.githubusercontent.com/17421742/337866170-010d776a-2cc5-469e-ae52-92d3180f8ac4.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTg0OTkwODMsIm5iZiI6MTcxODQ5ODc4MywicGF0aCI6Ii8xNzQyMTc0Mi8zMzc4NjYxNzAtMDEwZDc3NmEtMmNjNS00NjllLWFlNTItOTJkMzE4MGY4YWM0LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA2MTYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNjE2VDAwNDYyM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTZlOTM1N2RmMTA2NjU1OTNiYmYxMDJhMGI4YzdkZjQzZjFhNTY1MDUwNWFjYWFjOTc1ZWM2MzQzMDdkYjRkNWYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.OfaE4bWZlWkk6RQ2i-JIiSuJXW3LJwerj9gejdNGQ-U',
+    imageUrl: 'https://private-user-images.githubusercontent.com/17421742/337866170-010d776a-2cc5-469e-ae52-92d3180f8ac4.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTk1ODg2MTcsIm5iZiI6MTcxOTU4ODMxNywicGF0aCI6Ii8xNzQyMTc0Mi8zMzc4NjYxNzAtMDEwZDc3NmEtMmNjNS00NjllLWFlNTItOTJkMzE4MGY4YWM0LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA2MjglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNjI4VDE1MjUxN1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWIyODg3N2VkYjUxNzI2NTVhMDMwMzc0MmZlNmFkN2FiMWE1NzY1ZDdhZDY3YjVhNGQxNmY5NGE3ZmMxYmZhYzQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.DBqMTojl8bGLqsPIbjCt5DYst8tv3fxChix_naqUlyk',
     link: 'https://zenboard.app/',
     type: 'fullstack',
   },
@@ -61,6 +61,15 @@ export const portfolio: IProject[] = [
     type: 'fullstack'
   },
   {
+    title: 'NeatCoach',
+    technologies: ['Vue', 'vitest', 'cloudflare', 'ai', 'TailwindCSS'],
+    description: "NeatCoach is a smart running coach. It will take a distance and minutes and Build well structured a training plan to run the entered distance in the desired minutes by the end of the last week of the training plan.",
+    imageUrl: '',
+    link: 'https://github.com/jesusantguerrero/running-coach',
+    type: 'fullstack',
+    pinned: true
+  },
+  {
     title: 'Atmosphere-ui',
     technologies: ['Vue', 'vitest', 'storybook', 'TailwindCSS'],
     description: "A set of components for my laravel's jetstream-inertia projects",
@@ -69,6 +78,7 @@ export const portfolio: IProject[] = [
     type: 'package',
     pinned: false
   },
+
 ]
 
 export const more = [
