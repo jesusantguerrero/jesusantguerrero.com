@@ -12,23 +12,24 @@
     const handleAction = async (e: any) => {
         if (isLoading.value) return
         isLoading.value = true;
-        try {
             const formData = new FormData(e.target);
-            const result = await actions.newsletter(formData);
-            form.reset();
-            console.log(result);
-        } finally {
+            const { data: result, error} = await actions.contactMe(formData);
+            
+            if (!error) {
+                form.reset();
+                console.log(result); 
+            }
             isLoading.value = false
-        }
     }
+
 </script>
 
 <template>
     <form
           method="POST"
           @submit.prevent="handleAction"
+          :action="actions.contactMe"
         >
-        <input v-bind="{...getActionProps(actions.newsletter)}" />
         <section class="flex space-x-4">
             <section class="flex flex-col space-y-2">
                 <label for="email">Full Name</label>

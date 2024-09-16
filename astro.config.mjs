@@ -3,13 +3,13 @@ import vue from "@astrojs/vue";
 import tailwind from "@astrojs/tailwind";
 
 import netlify from "@astrojs/netlify";
+import node from "@astrojs/node";
+
+const { NODE_ADAPTER } = loadEnv(process.env.NODE_ENV, process.cwd(), "");
 
 // https://astro.build/config
 export default defineConfig({
   output: "hybrid",
-  experimental: {
-    actions: true
-  },
   markdown: {
     render: ['@astrojs/markdown-remark', {
       remarkPlugins: [['remark-gfm'], ['remark-smartypants'], ['astro-remark-digital-garden', {
@@ -22,5 +22,9 @@ export default defineConfig({
     vue(), 
     tailwind(), 
   ],
-  adapter: netlify()
+  adapter: NODE_ADAPTER ? 
+  node({
+    mode: 'standalone' 
+  }) 
+  : netlify()
 });
