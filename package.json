@@ -18,7 +18,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "@astrojs/vue": "^4.5.0",
     "@tailwindcss/typography": "^0.5.15",
-    "astro": "^4.15.4",
+    "astro": "^4.15.6",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.45",
     "sass": "^1.78.0",
