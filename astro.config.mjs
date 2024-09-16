@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import vue from "@astrojs/vue";
 import tailwind from "@astrojs/tailwind";
+import { loadEnv } from "vite";
 
 import netlify from "@astrojs/netlify";
 import node from "@astrojs/node";
